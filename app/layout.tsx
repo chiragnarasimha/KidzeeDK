@@ -27,7 +27,7 @@ export default function RootLayout({
         inter.variable
       )}
     >
-      <body>
+      <body className="bg-[#EBE1FF]">
         {/*<ThemeProvider>*/}
         <NavBar />
         {children}
