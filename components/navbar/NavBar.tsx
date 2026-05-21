@@ -1,9 +1,13 @@
-import { KidzeeLogo } from "@/assets/svg-assets"
+import { KidzeeLogo } from "@/assets/SvgAssets"
 
 const NavBar = () => {
   return (
     <nav>
-      <KidzeeLogo />
+      <KidzeeLogo
+        className="h-44 w-3xl"
+        fillCss="fill-[#65318E]"
+        borderCss="fill-[#FFF200]"
+      />
     </nav>
   )
 }
