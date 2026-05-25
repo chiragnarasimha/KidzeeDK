@@ -4,14 +4,12 @@ type SvgProps = {
 type KidzeeLogoProps = SvgProps & {
   fillCss?: string
   borderCss?: string
-  textCss?: string
 }
 
 export const KidzeeLogo = ({
   className,
   fillCss,
   borderCss,
-  textCss,
 }: KidzeeLogoProps) => {
   return (
     <svg
