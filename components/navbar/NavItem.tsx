@@ -34,7 +34,7 @@ const NavItem = ({ page, icon }: GroupItemProps) => {
         // defaultChecked={pathname.includes(pageLowerCase)}
       />
 
-      <div className="flex h-14 min-w-16 flex-col items-center justify-center px-3 md:h-10 md:flex-row">
+      <div className="flex h-14 min-w-16 flex-col items-center justify-center px-3 md:h-10 md:flex-row md:gap-1">
         <HugeiconsIcon icon={icon} className={"[&svg]:w-5 md:[&svg]:w-5"} />
         <span className="text-xs">{page}</span>
       </div>

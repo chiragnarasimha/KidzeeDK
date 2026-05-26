@@ -4,6 +4,7 @@ import NavBar from "@/components/navbar/NavBar"
 import { cn } from "@/lib/utils"
 import "./globals.css"
 import AppThemeProvider from "@/components/app-theme-provider"
+import styles from "./layout.module.css"
 
 const inter = Inter({ subsets: ["latin"], variable: "--font-sans" })
 
@@ -29,11 +30,19 @@ export default function RootLayout({
       )}
     >
       {/* <body className="bg-[#EBE1FF]"> */}
-      <body className="p-6">
-        <AppThemeProvider>
-          <NavBar />
-          {children}
-        </AppThemeProvider>
+      <body>
+        <div className="relative min-h-screen w-full overflow-hidden bg-black">
+          <div
+            className={cn(
+              "pointer-events-none absolute inset-0 z-0",
+              styles.background
+            )}
+          />
+          <AppThemeProvider>
+            <NavBar />
+            {children}
+          </AppThemeProvider>
+        </div>
       </body>
     </html>
   )

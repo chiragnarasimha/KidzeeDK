@@ -125,9 +125,10 @@ export const KidzeeLogo = ({ className }: SvgProps) => {
       </svg>
       <div
         className={cn(
-          "-my-2.5 text-center text-xs font-bold text-primary",
+          "-my-2.5 cursor-pointer text-center text-xs font-bold text-primary",
           fillCss
         )}
+        onClick={handleClick}
       >
         Nurturing Gen-Next
       </div>

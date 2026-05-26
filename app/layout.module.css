@@ -1,0 +1,14 @@
+.background {
+  /* background: radial-gradient( */
+  /*   125% 125% at 50% 100%, */
+  /*   var(--background) 40%, */
+  /*   var(--mauve) 100% */
+  /* ); */
+
+  background: radial-gradient(
+    circle at top,
+    rgba(255, 255, 255, 0.08) 0%,
+    rgba(255, 140, 250, 0.08) 20%,
+    rgba(0, 0, 0, 0) 60%
+  );
+}
