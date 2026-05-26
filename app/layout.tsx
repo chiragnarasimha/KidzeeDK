@@ -3,7 +3,7 @@ import { Geist_Mono, Inter } from "next/font/google"
 import NavBar from "@/components/navbar/NavBar"
 import { cn } from "@/lib/utils"
 import "./globals.css"
-import AppThemeProvider from "@/components/app-theme-provider"
+// import AppThemeProvider from "@/components/app-theme-provider"
 import styles from "./layout.module.css"
 
 const inter = Inter({ subsets: ["latin"], variable: "--font-sans" })
