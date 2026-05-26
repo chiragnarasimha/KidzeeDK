@@ -39,7 +39,7 @@ export default function RootLayout({
           />
           <AppThemeProvider>
             <NavBar />
-            <div className="my-12">{children}</div>
+            <div className="my-28">{children}</div>
           </AppThemeProvider>
         </div>
       </body>

@@ -1,19 +1,24 @@
-import { Button } from "@/components/ui/button"
-
 export default function Page() {
   return (
-    <div className="flex min-h-svh p-6">
-      <div className="flex max-w-md min-w-0 flex-col gap-4 text-sm leading-loose">
-        <div>
-          <h1 className="font-medium">Project ready!</h1>
-          <p>You may now add components and start building.</p>
-          <p>We&apos;ve already added the button component for you.</p>
-          <Button className="mt-2">Button</Button>
-        </div>
-        <div className="font-mono text-xs text-muted-foreground">
-          (Press <kbd>d</kbd> to toggle dark mode)
-        </div>
-      </div>
-    </div>
+    <>
+      <Hero />
+    </>
   )
 }
+
+const Hero = () => (
+  <>
+    <h1 className="px-2 text-center text-4xl font-extrabold tracking-tighter text-balance uppercase max-lg:font-medium max-sm:px-4 sm:text-5xl lg:text-6xl xl:text-8xl">
+      Build a{" "}
+      <span className="bg-linear-to-r from-primary via-(--yellow) to-primary bg-clip-text text-transparent">
+        foundation
+      </span>
+    </h1>
+    <h2 className="px-2 text-center text-2xl font-extrabold tracking-tighter text-balance uppercase max-lg:font-medium max-sm:px-4 sm:text-3xl lg:text-4xl xl:text-6xl">
+      <span className="text-muted-foreground">for a </span>
+      <span className="text-accent">life time </span>
+      <span className="text-muted-foreground">of </span>
+      <span className="text-accent">learning</span>
+    </h2>
+  </>
+)

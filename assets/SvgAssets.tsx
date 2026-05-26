@@ -11,8 +11,10 @@ export const KidzeeLogo = ({ className }: SvgProps) => {
   const router = useRouter()
   const handleClick = () => router.push("/")
 
-  const fillCss = "fill-(--mauve)"
-  const borderCss = "fill-(--yellow)"
+  // const fillCss = "fill-(--mauve)"
+  // const borderCss = "fill-(--yellow)"
+  const fillCss = "fill-[#65318E]"
+  const borderCss = "fill-[#FFF200]"
   return (
     <div className={cn(className, "cursor-pointer")}>
       <svg
