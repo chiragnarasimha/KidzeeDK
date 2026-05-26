@@ -16,7 +16,7 @@ import { KidzeeLogo } from "@/assets/SvgAssets"
 const Navbar = () => {
   return (
     <>
-      <KidzeeLogo />
+      <KidzeeLogo className="fixed z-20" />
       <nav
         className={cn(
           "fixed bottom-0 left-0 z-10 my-4 flex w-screen justify-center gap-4 md:top-0 md:bottom-auto"
