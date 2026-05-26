@@ -10,24 +10,8 @@
     position-anchor: --hovered-button;
   }
 
-  /*  Only apply anchor to checked item if the user is NOT interacting with the group  */
-  /* &:not(:hover) { */
-  /*   input { */
-  /*     &:checked { */
-  /*       anchor-name: --hovered-button; */
-  /*     } */
-  /*   } */
-  /* } */
-
   input {
     cursor: pointer;
-    /* &:hover { */
-    /*   anchor-name: --hovered-button; */
-    /* } */
-
-    &:checked {
-      anchor-name: --hovered-button;
-    }
   }
 }
 

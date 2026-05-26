@@ -13,7 +13,8 @@ const NavItem = ({ page, icon }: GroupItemProps) => {
   const router = useRouter()
   const pathname = usePathname()
   const pageLowerCase = page.toLocaleLowerCase()
-  const defaultChecked = pathname.includes(pageLowerCase)
+  const defaultChecked = pathname !== "" && pathname.includes(pageLowerCase)
+  console.log("rendered...")
   return (
     <label
       htmlFor={id}
@@ -31,7 +32,6 @@ const NavItem = ({ page, icon }: GroupItemProps) => {
           [styles["anchorName"]]: defaultChecked,
         })}
         name="nav-button"
-        // defaultChecked={pathname.includes(pageLowerCase)}
       />
 
       <div className="flex h-14 min-w-16 flex-col items-center justify-center px-3 md:h-10 md:flex-row md:gap-1">

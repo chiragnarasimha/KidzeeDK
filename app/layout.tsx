@@ -29,9 +29,8 @@ export default function RootLayout({
         inter.variable
       )}
     >
-      {/* <body className="bg-[#EBE1FF]"> */}
       <body>
-        <div className="relative min-h-screen w-full overflow-hidden bg-black">
+        <div className="relative min-h-screen w-full overflow-hidden bg-black p-6">
           <div
             className={cn(
               "pointer-events-none absolute inset-0 z-0",
@@ -40,7 +39,7 @@ export default function RootLayout({
           />
           <AppThemeProvider>
             <NavBar />
-            {children}
+            <div className="my-12">{children}</div>
           </AppThemeProvider>
         </div>
       </body>
