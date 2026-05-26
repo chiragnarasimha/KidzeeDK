@@ -1,9 +1,13 @@
 import { cn } from "@/lib/utils"
 import styles from "./page.module.css"
+import Image from "next/image"
+import IntoImage from "@/assets/Introduction.png"
+import { ReactNode } from "react"
 export default function Page() {
   return (
     <>
       <Hero />
+      <Intro />
     </>
   )
 }
@@ -21,11 +25,71 @@ const Hero = () => (
         foundation
       </span>
     </h1>
-    <h2 className="px-2 text-center text-2xl font-extrabold tracking-tighter text-balance uppercase max-lg:font-medium max-sm:px-4 sm:text-3xl lg:text-4xl xl:text-6xl">
+    <h2 className="px-2 text-center text-2xl font-bold tracking-tighter text-balance uppercase max-lg:font-medium max-sm:px-4 sm:text-3xl lg:text-4xl xl:text-6xl">
       <span className="text-muted-foreground">for a </span>
-      <span className="text-accent">life time </span>
+      <span className="text-accent">lifetime </span>
       <span className="text-muted-foreground">of </span>
       <span className="text-accent">learning</span>
     </h2>
   </>
+)
+
+const Intro = () => (
+  <section className="flex flex-col items-center lg:flex-row lg:justify-center">
+    <Image
+      src={IntoImage}
+      alt={"Introduction Image"}
+      className="w-sm grow-0 md:w-md lg:w-lg"
+    />
+    <div className="flex flex-col gap-3 lg:w-3xl">
+      <IntroPara h3="Kidzee Pre-school">
+        Kidzee Pre-school is a leading chain of Pre-schools located in India and
+        Nepal backed by Zee Learn Limited. With more than two decades of
+        experience in the Pre-school industry, Kidzee has nurtured more than
+        1.5m+ children throughout India. Being one of the largest Pre-schools in
+        India. Kidzee has 2,500+ centers in 600+ cities in India and Nepal.
+      </IntroPara>
+      <IntroPara h3="Kidzee Advantage">
+        <p>
+          Kidzee is a leader and a trendsetter in Early Childhood Care and
+          Education (ECCE). Our business partners’ passion and drive are vital
+          for our brand’s success.
+        </p>
+
+        <p>
+          Our Business Partners don't just take the name, they also take our
+          pedagogy- PéNTEMiND, guidelines to teach, prescribes books/plays to be
+          followed and so on to the ground.
+        </p>
+
+        <p>
+          Starting a Pre-school requires a strategic researching, planning,
+          designing, and organising. Kidzee Professional research, makes this
+          journey easier and rewarding for all our Business Partners.
+        </p>
+
+        <p>
+          Secret to Success is Service and Support. We provide pre-opening and
+          operational support apart from the regular support that is given
+          additional to all systems and process.
+        </p>
+      </IntroPara>
+    </div>
+  </section>
+)
+type IntroParaType = {
+  h3: string
+  children: ReactNode
+}
+const IntroPara = ({ h3, children }: IntroParaType) => (
+  <>
+    <h3 className="mb-1 text-xl font-semibold tracking-tight text-primary uppercase">
+      {h3}
+    </h3>
+    {children}
+  </>
+)
+
+const Highlight = ({ children }: { children: ReactNode }) => (
+  <span className="rounded bg-yellow-100 px-1 text-yellow-800">{children}</span>
 )

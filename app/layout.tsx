@@ -30,19 +30,27 @@ export default function RootLayout({
       )}
     >
       <body>
-        <div className="relative min-h-screen w-full overflow-hidden bg-black p-6">
-          <div
-            className={cn(
-              "pointer-events-none absolute inset-0 z-0",
-              styles.background
-            )}
-          />
-          <AppThemeProvider>
-            <NavBar />
-            <div className="my-28">{children}</div>
-          </AppThemeProvider>
-        </div>
+        <div
+          className={cn(styles.background, "fixed top-0 left-0 h-dvh w-dvw")}
+        />
+        {/* <AppThemeProvider> */}
+        <NavBar />
+        <div className="my-28">{children}</div>
+        {/* </AppThemeProvider> */}
       </body>
     </html>
   )
+}
+
+{
+  /* <AppThemeProvider> */
+}
+{
+  /*   <NavBar /> */
+}
+{
+  /*   <div className="my-28">{children}</div> */
+}
+{
+  /* </AppThemeProvider> */
 }
