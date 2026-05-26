@@ -15,9 +15,9 @@ export default function Page() {
 const Hero = () => (
   <>
     <h1 className="px-2 text-center text-4xl font-extrabold tracking-tighter text-balance uppercase max-lg:font-medium max-sm:px-4 sm:text-5xl lg:text-6xl xl:text-8xl">
-      <span className="animateSlideIn delay1">Build </span>
-      <span className="animateSlideIn delay2">a </span>
-      <span className={cn("animateSlideIn delay3")}>
+      <span className="animateFadeIn delay1">Build </span>
+      <span className="animateFadeIn delay2">a </span>
+      <span className={cn("animateFadeIn delay3")}>
         <span
           className={cn(
             "bg-linear-to-r from-primary via-(--yellow) to-primary bg-clip-text text-transparent",
@@ -29,12 +29,12 @@ const Hero = () => (
       </span>
     </h1>
     <h2 className="px-2 text-center text-2xl font-bold tracking-tighter text-balance uppercase max-lg:font-medium max-sm:px-4 sm:text-3xl lg:text-4xl xl:text-6xl">
-      <span className="animateSlideIn delay4 text-muted-foreground">
+      <span className="animateFadeIn delay4 text-muted-foreground">
         for a{" "}
       </span>
-      <span className="animateSlideIn delay5 text-accent">lifetime </span>
-      <span className="animateSlideIn delay6 text-muted-foreground">of </span>
-      <span className="animateSlideIn delay7 text-accent">learning</span>
+      <span className="animateFadeIn delay5 text-accent">lifetime </span>
+      <span className="animateFadeIn delay6 text-muted-foreground">of </span>
+      <span className="animateFadeIn delay7 text-accent">learning</span>
     </h2>
   </>
 )
@@ -44,12 +44,12 @@ const Intro = () => (
     <Image
       src={IntoImage}
       alt={"Introduction Image"}
-      className="animateSlideIn delay8 w-sm grow-0 md:w-md lg:w-lg"
+      className="animateSlideIn delay10 w-sm grow-0 md:w-md lg:w-lg"
     />
     <div className="flex flex-col gap-3 lg:w-3xl">
       <IntroPara
         h3="Kidzee Pre-school"
-        animationClassName={"animateSlideIn delay9"}
+        animationClassName={"animateSlideIn delay11"}
       >
         Kidzee Pre-school is a leading chain of Pre-schools located in India and
         Nepal backed by Zee Learn Limited. With more than two decades of
@@ -59,7 +59,7 @@ const Intro = () => (
       </IntroPara>
       <IntroPara
         h3="Kidzee Advantage"
-        animationClassName={"animateSlideIn delay10"}
+        animationClassName={"animateSlideIn delay12"}
       >
         <p>
           Kidzee is a leader and a trendsetter in Early Childhood Care and
