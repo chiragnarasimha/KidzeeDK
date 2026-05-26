@@ -29,9 +29,7 @@ const Hero = () => (
       </span>
     </h1>
     <h2 className="px-2 text-center text-2xl font-bold tracking-tighter text-balance uppercase max-lg:font-medium max-sm:px-4 sm:text-3xl lg:text-4xl xl:text-6xl">
-      <span className="animateFadeIn delay4 text-muted-foreground">
-        for a{" "}
-      </span>
+      <span className="animateFadeIn delay4 text-muted-foreground">for a </span>
       <span className="animateFadeIn delay5 text-accent">lifetime </span>
       <span className="animateFadeIn delay6 text-muted-foreground">of </span>
       <span className="animateFadeIn delay7 text-accent">learning</span>
