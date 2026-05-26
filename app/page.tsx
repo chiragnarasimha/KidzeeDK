@@ -1,3 +1,5 @@
+import { cn } from "@/lib/utils"
+import styles from "./page.module.css"
 export default function Page() {
   return (
     <>
@@ -10,7 +12,12 @@ const Hero = () => (
   <>
     <h1 className="px-2 text-center text-4xl font-extrabold tracking-tighter text-balance uppercase max-lg:font-medium max-sm:px-4 sm:text-5xl lg:text-6xl xl:text-8xl">
       Build a{" "}
-      <span className="bg-linear-to-r from-primary via-(--yellow) to-primary bg-clip-text text-transparent">
+      <span
+        className={cn(
+          "bg-linear-to-r from-primary via-(--yellow) to-primary bg-clip-text text-transparent",
+          styles.animatedGradient
+        )}
+      >
         foundation
       </span>
     </h1>
