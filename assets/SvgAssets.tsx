@@ -29,7 +29,6 @@ export const KidzeeLogo = ({ className }: SvgProps) => {
             height="56"
             viewBox="0 0 173 56"
             fill="none"
-            onClick={handleClick}
             pointerEvents="all"
             className="-mt-1.5 w-full"
           >
@@ -138,7 +137,6 @@ export const KidzeeLogo = ({ className }: SvgProps) => {
             "-mt-2.5 cursor-pointer text-center text-xs font-bold text-primary",
             fillCss
           )}
-          onClick={handleClick}
         >
           Nurturing Gen-Next
         </CardContent>
