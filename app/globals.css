@@ -47,74 +47,6 @@
   --radius-4xl: calc(var(--radius) * 2.6);
 }
 
-/* :root { */
-/*   --background: oklch(1 0 0); */
-/*   --foreground: oklch(0.145 0 0); */
-/*   --card: oklch(1 0 0); */
-/*   --card-foreground: oklch(0.145 0 0); */
-/*   --popover: oklch(1 0 0); */
-/*   --popover-foreground: oklch(0.145 0 0); */
-/*   --primary: oklch(0.205 0 0); */
-/*   --primary-foreground: oklch(0.985 0 0); */
-/*   --secondary: oklch(0.97 0 0); */
-/*   --secondary-foreground: oklch(0.205 0 0); */
-/*   --muted: oklch(0.97 0 0); */
-/*   --muted-foreground: oklch(0.556 0 0); */
-/*   --accent: oklch(0.97 0 0); */
-/*   --accent-foreground: oklch(0.205 0 0); */
-/*   --destructive: oklch(0.577 0.245 27.325); */
-/*   --border: oklch(0.922 0 0); */
-/*   --input: oklch(0.922 0 0); */
-/*   --ring: oklch(0.708 0 0); */
-/*   --chart-1: oklch(0.87 0 0); */
-/*   --chart-2: oklch(0.556 0 0); */
-/*   --chart-3: oklch(0.439 0 0); */
-/*   --chart-4: oklch(0.371 0 0); */
-/*   --chart-5: oklch(0.269 0 0); */
-/*   --radius: 0.625rem; */
-/*   --sidebar: oklch(0.985 0 0); */
-/*   --sidebar-foreground: oklch(0.145 0 0); */
-/*   --sidebar-primary: oklch(0.205 0 0); */
-/*   --sidebar-primary-foreground: oklch(0.985 0 0); */
-/*   --sidebar-accent: oklch(0.97 0 0); */
-/*   --sidebar-accent-foreground: oklch(0.205 0 0); */
-/*   --sidebar-border: oklch(0.922 0 0); */
-/*   --sidebar-ring: oklch(0.708 0 0); */
-/* } */
-/**/
-/* .dark { */
-/*   --background: oklch(0.145 0 0); */
-/*   --foreground: oklch(0.985 0 0); */
-/*   --card: oklch(0.205 0 0); */
-/*   --card-foreground: oklch(0.985 0 0); */
-/*   --popover: oklch(0.205 0 0); */
-/*   --popover-foreground: oklch(0.985 0 0); */
-/*   --primary: oklch(0.922 0 0); */
-/*   --primary-foreground: oklch(0.205 0 0); */
-/*   --secondary: oklch(0.269 0 0); */
-/*   --secondary-foreground: oklch(0.985 0 0); */
-/*   --muted: oklch(0.269 0 0); */
-/*   --muted-foreground: oklch(0.708 0 0); */
-/*   --accent: oklch(0.269 0 0); */
-/*   --accent-foreground: oklch(0.985 0 0); */
-/*   --destructive: oklch(0.704 0.191 22.216); */
-/*   --border: oklch(1 0 0 / 10%); */
-/*   --input: oklch(1 0 0 / 15%); */
-/*   --ring: oklch(0.556 0 0); */
-/*   --chart-1: oklch(0.87 0 0); */
-/*   --chart-2: oklch(0.556 0 0); */
-/*   --chart-3: oklch(0.439 0 0); */
-/*   --chart-4: oklch(0.371 0 0); */
-/*   --chart-5: oklch(0.269 0 0); */
-/*   --sidebar: oklch(0.205 0 0); */
-/*   --sidebar-foreground: oklch(0.985 0 0); */
-/*   --sidebar-primary: oklch(0.488 0.243 264.376); */
-/*   --sidebar-primary-foreground: oklch(0.985 0 0); */
-/*   --sidebar-accent: oklch(0.269 0 0); */
-/*   --sidebar-accent-foreground: oklch(0.985 0 0); */
-/*   --sidebar-border: oklch(1 0 0 / 10%); */
-/*   --sidebar-ring: oklch(0.556 0 0); */
-/* } */
 :root {
   --background: oklch(0.9578 0.0058 264.5321);
   --foreground: oklch(0.4355 0.043 279.325);
@@ -159,6 +91,34 @@
   --code-selection: oklch(0.906 0.0117 264.5071);
   --code-border: oklch(0.906 0.0117 264.5071);
   --radius: 0.75rem;
+
+  /* Catppuccin Latte (Light Theme) */
+  --rosewater: hsl(11, 59%, 67%);
+  --flamingo: hsl(0, 60%, 67%);
+  --pink: hsl(316, 73%, 69%);
+  --mauve: hsl(266, 85%, 58%);
+  --red: hsl(347, 87%, 44%);
+  --maroon: hsl(355, 76%, 59%);
+  --peach: hsl(22, 99%, 52%);
+  --yellow: hsl(35, 77%, 49%);
+  --green: hsl(109, 58%, 40%);
+  --teal: hsl(183, 74%, 35%);
+  --sky: hsl(197, 97%, 46%);
+  --sapphire: hsl(189, 70%, 42%);
+  --blue: hsl(220, 91%, 54%);
+  --lavender: hsl(231, 97%, 72%);
+  --text: hsl(234, 16%, 35%);
+  --subtext1: hsl(233, 13%, 41%);
+  --subtext0: hsl(233, 10%, 47%);
+  --overlay2: hsl(232, 10%, 53%);
+  --overlay1: hsl(231, 10%, 59%);
+  --overlay0: hsl(228, 11%, 65%);
+  --surface2: hsl(227, 12%, 71%);
+  --surface1: hsl(225, 14%, 77%);
+  --surface0: hsl(223, 16%, 83%);
+  --base: hsl(220, 23%, 95%);
+  --mantle: #e6e9ef;
+  --crust: hsl(220, 21%, 89%);
 }
 
 .dark {
@@ -205,6 +165,35 @@
   --code-selection: oklch(0.3 0.0254 284.0647);
   --code-border: oklch(0.3 0.0254 284.0647);
   --radius: 0.75rem;
+
+  /* Catppuccin Frappe (Dark Theme) */
+  --rosewater: hsl(17, 56%, 91%);
+  --flamingo: hsl(0, 59%, 89%);
+  --pink: hsl(316, 72%, 86%);
+  --mauve: hsl(267, 91%, 78%);
+  --red: hsl(343, 82%, 75%);
+  --maroon: hsl(353, 69%, 67%);
+  --peach: hsl(24, 94%, 86%);
+  --yellow: hsl(41, 96%, 78%);
+  --green: hsl(134, 51%, 77%);
+  --teal: hsl(174, 64%, 72%);
+  --sky: hsl(189, 71%, 73%);
+  --sapphire: hsl(202, 83%, 69%);
+  --blue: hsl(220, 91%, 75%);
+  --lavender: hsl(238, 100%, 85%);
+  --text: hsl(220, 13%, 95%);
+  --subtext1: hsl(220, 13%, 82%);
+  --subtext0: hsl(220, 13%, 74%);
+  --overlay2: hsl(220, 13%, 66%);
+  --overlay1: hsl(220, 13%, 58%);
+  --overlay0: hsl(220, 13%, 52%);
+  --surface2: hsl(220, 13%, 44%);
+  --surface2-transparent: hsla(220, 13%, 44%, 0.1);
+  --surface1: hsl(220, 13%, 37%);
+  --surface0: hsl(220, 13%, 30%);
+  --base: hsl(240, 21%, 15%);
+  --mantle: hsl(240, 21%, 12%);
+  --crust: hsl(240, 21%, 10%);
 }
 
 @layer base {

@@ -14,7 +14,6 @@ const NavItem = ({ page, icon }: GroupItemProps) => {
   const pathname = usePathname()
   const pageLowerCase = page.toLocaleLowerCase()
   const defaultChecked = pathname.includes(pageLowerCase)
-  console.log("Rendered...")
   return (
     <label
       htmlFor={id}
@@ -35,7 +34,7 @@ const NavItem = ({ page, icon }: GroupItemProps) => {
         // defaultChecked={pathname.includes(pageLowerCase)}
       />
 
-      <div className="flex h-14 w-16 flex-col items-center justify-center md:h-10 md:flex-row md:gap-1">
+      <div className="flex h-14 min-w-16 flex-col items-center justify-center md:h-10 md:flex-row md:gap-1">
         <HugeiconsIcon
           icon={icon}
           className={"grow md:grow-0 [&svg]:w-6 md:[&svg]:w-5"}
