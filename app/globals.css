@@ -213,32 +213,43 @@
 }
 
 .animateFadeIn {
-  /* Initially, nothing should be displayed. The animation will change these properties */
   opacity: 0;
-  filter: blur(8px);
   animation: fadeIn 1s cubic-bezier(0.5, -0.01, 0.47, 1) forwards;
+  /* This is needed, or else animation will not work well in safari */
+  will-change: opacity, filter;
 }
 
 .animateSlideIn {
-  /* Initially, nothing should be displayed. The animation will change these properties */
   opacity: 0;
-  filter: blur(8px);
-  transform: translateY(40px);
   animation: slideIn 1s cubic-bezier(0.5, -0.01, 0.47, 1) forwards;
+  /* This is needed, or else animation will not work well in safari */
+  will-change: opacity, filter, transform;
 }
+
 @keyframes fadeIn {
+  from {
+    opacity: 0;
+    filter: blur(8px);
+  }
   to {
     opacity: 1;
-    filter: blur(0);
+    filter: blur(0px);
   }
 }
+
 @keyframes slideIn {
+  from {
+    opacity: 0;
+    filter: blur(8px);
+    transform: translateY(40px);
+  }
   to {
     opacity: 1;
-    filter: blur(0);
+    filter: blur(0px);
     transform: translateY(0);
   }
 }
+
 /* ── Staggered delays ────────────────────────────────── */
 .delay1 {
   animation-delay: 0.12s;

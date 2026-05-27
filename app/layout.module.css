@@ -1,19 +1,11 @@
 .background {
-  /* background: radial-gradient( */
-  /*   125% 125% at 50% 100%, */
-  /*   var(--background) 40%, */
-  /*   var(--mauve) 100% */
-  /* ); */
+  /* min-height: 100dvh; */
+  /* width: 100%; */
 
-  /* background: radial-gradient( */
-  /*   circle at top, */
-  /*   rgba(255, 255, 255, 0.08) 0%, */
-  /*   rgba(255, 140, 250, 0.08) 20%, */
-  /*   rgba(0, 0, 0, 0) 60% */
-  /* ); */
-
+  /* shorthand for top: 0; right: 0; bottom: 0; left: 0 */
+  inset: 0;
   z-index: -1;
-  background-image: linear-gradient(
+  background: linear-gradient(
     135deg,
     #f8bbd9 0%,
     #fdd5b4 25%,

@@ -29,13 +29,13 @@ export default function RootLayout({
         inter.variable
       )}
     >
-      <body>
-        <div
-          className={cn(styles.background, "fixed top-0 left-0 h-dvh w-dvw")}
-        />
+      <body className="overflow-hidden">
+        <div className={cn(styles.background, "fixed top-0 left-0")} />
         {/* <AppThemeProvider> */}
         <NavBar />
-        <div className="my-28">{children}</div>
+        <div className="h-dvh overflow-y-auto">
+          <div className="my-28">{children}</div>
+        </div>
         {/* </AppThemeProvider> */}
       </body>
     </html>
