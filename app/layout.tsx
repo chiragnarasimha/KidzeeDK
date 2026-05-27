@@ -34,7 +34,7 @@ export default function RootLayout({
         {/* <AppThemeProvider> */}
         <NavBar />
         <div className="h-dvh overflow-y-auto">
-          <div className="my-28">{children}</div>
+          <div className="my-28 p-6">{children}</div>
         </div>
         {/* </AppThemeProvider> */}
       </body>
