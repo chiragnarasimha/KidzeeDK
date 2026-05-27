@@ -15,6 +15,7 @@ const NavItem = ({ page, icon }: GroupItemProps) => {
   const pageLowerCase = page.toLocaleLowerCase()
   const defaultChecked = pathname !== "" && pathname.includes(pageLowerCase)
   console.log("rendered...")
+  const handleClick = () => router.push(pageLowerCase)
   return (
     <label
       htmlFor={id}
@@ -23,7 +24,7 @@ const NavItem = ({ page, icon }: GroupItemProps) => {
         /* Position relative is needed because the parent is rendering an after pseudo element with position relative. We want to make sure that the buttons will render on top of the pseudo element*/
         "relative"
       )}
-      onClick={() => router.push(pageLowerCase)}
+      onClick={handleClick}
     >
       <input
         type="radio"
@@ -32,9 +33,13 @@ const NavItem = ({ page, icon }: GroupItemProps) => {
           [styles["anchorName"]]: defaultChecked,
         })}
         name="nav-button"
+        onClick={handleClick}
       />
 
-      <div className="flex h-14 min-w-16 flex-col items-center justify-center px-3 md:h-10 md:flex-row md:gap-1">
+      <div
+        className="flex h-14 min-w-16 flex-col items-center justify-center px-3 md:h-10 md:flex-row md:gap-1"
+        onClick={handleClick}
+      >
         <HugeiconsIcon icon={icon} className={"[&svg]:w-5 md:[&svg]:w-5"} />
         <span className="text-xs">{page}</span>
       </div>
