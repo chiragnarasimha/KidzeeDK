@@ -14,7 +14,6 @@ const NavItem = ({ page, icon }: GroupItemProps) => {
   const pathname = usePathname()
   const pageLowerCase = page.toLocaleLowerCase()
   const defaultChecked = pathname !== "" && pathname.includes(pageLowerCase)
-  console.log("rendered...")
   const handleClick = () => router.push(pageLowerCase)
   return (
     <label

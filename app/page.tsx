@@ -3,9 +3,20 @@ import styles from "./page.module.css"
 import Image from "next/image"
 import IntoImage from "@/assets/Introduction.png"
 import { ReactNode } from "react"
+import Head from "next/head"
 export default function Page() {
   return (
     <>
+      <Head>
+        <title>
+          Kidzee Doddakammanahalli | Best Preschool and Playschool in
+          Doddakammanahalli, Bangalore
+        </title>
+        <meta
+          name="description"
+          content="Kidzee Doddakammanahalli is a trusted preschool and playschool in Doddakammanahalli, Bangalore. Offering Playgroup, Nursery, Kindergarten and Daycare backed by the award-winning Péntemind curriculum."
+        />
+      </Head>
       <Hero />
       <Intro />
     </>
