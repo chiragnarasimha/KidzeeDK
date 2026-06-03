@@ -6,6 +6,7 @@ import "./globals.css"
 // import AppThemeProvider from "@/components/app-theme-provider"
 import styles from "./layout.module.css"
 import { Metadata } from "next"
+import { KidzeeLogo } from "@/components/assets/SvgAssets"
 
 const inter = Inter({ subsets: ["latin"], variable: "--font-sans" })
 
@@ -41,23 +42,17 @@ export default function RootLayout({
         {/* <AppThemeProvider> */}
         <NavBar />
         <div className="h-dvh overflow-y-auto">
-          <div className="my-28 p-6">{children}</div>
+          <KidzeeLogo
+            className={cn(
+              "md:w-24 md:translate-x-0 lg:w-30",
+              styles.logoContainer
+            )}
+            textCss={cn("md:-mt-4 md:text-[7px]", "lg:-mt-3 lg:text-[9px]")}
+          />
+          <div className={cn("p-6", styles.appContainer)}>{children}</div>
         </div>
         {/* </AppThemeProvider> */}
       </body>
     </html>
   )
-}
-
-{
-  /* <AppThemeProvider> */
-}
-{
-  /*   <NavBar /> */
-}
-{
-  /*   <div className="my-28">{children}</div> */
-}
-{
-  /* </AppThemeProvider> */
 }

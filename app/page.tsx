@@ -4,6 +4,7 @@ import Image from "next/image"
 import IntoImage from "@/assets/Introduction.png"
 import { ReactNode } from "react"
 import Head from "next/head"
+import { KidzeeLogo } from "@/components/assets/SvgAssets"
 export default function Page() {
   return (
     <>

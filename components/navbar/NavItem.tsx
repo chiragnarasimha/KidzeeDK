@@ -39,8 +39,16 @@ const NavItem = ({ page, icon }: GroupItemProps) => {
         className="flex h-14 min-w-16 flex-col items-center justify-center px-3 md:h-10 md:flex-row md:gap-1"
         onClick={handleClick}
       >
-        <HugeiconsIcon icon={icon} className={"[&svg]:w-5 md:[&svg]:w-5"} />
-        <span className="text-xs">{page}</span>
+        <HugeiconsIcon
+          icon={icon}
+          className={"[&svg]:w-5 md:[&svg]:w-5"}
+          color={defaultChecked ? "#612595" : ""}
+        />
+        <span
+          className={cn("text-xs", { [styles["activeText"]]: defaultChecked })}
+        >
+          {page}
+        </span>
       </div>
     </label>
   )

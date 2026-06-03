@@ -33,3 +33,24 @@
   background-position: center;
   background-repeat: no-repeat;
 }
+
+.appContainer {
+  /* margin-top: 2rem; */
+
+  margin-top: calc(var(--spacing) * 10);
+
+  /* break point - md */
+  @media (width >= 48rem /* 768px */) {
+    margin-top: calc(var(--spacing) * 25);
+  }
+}
+
+.logoContainer {
+  margin-top: calc(var(--spacing) * 10);
+  /* break point - md */
+  @media (width >= 48rem /* 768px */) {
+    position: fixed;
+    left: 2rem;
+    top: -0.9rem;
+  }
+}

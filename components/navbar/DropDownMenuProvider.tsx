@@ -7,7 +7,7 @@ import { ReactNode, useRef } from "react"
 import {
   HamburgerMenuButton,
   HamburgerMenuButtonHandle,
-} from "../custom/hamburger-menu-button"
+} from "../customUi/hamburger-menu-button"
 
 type Props = {
   children: ReactNode

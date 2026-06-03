@@ -18,3 +18,7 @@
 .anchorName {
   anchor-name: --hovered-button;
 }
+
+.activeText {
+  color: #612595ff;
+}
