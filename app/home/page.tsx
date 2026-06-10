@@ -6,6 +6,7 @@ import Image from "next/image"
 import { ReactNode } from "react"
 import styles from "./page.module.css"
 import HeroImage from "@/assets/HeroImage.png"
+import { Button } from "@/components/ui/button"
 
 // const marelleBaton2 = localFont({
 //   // src: "../../assets/fonts/MarelleBaton2-Regular.woff2",
@@ -36,81 +37,88 @@ export default function Page() {
 }
 
 const Hero = () => (
-  <div className="grid place-items-center md:grid-cols-2">
-    <div className="flex flex-col gap-10">
-      <p className="uppercase xxs:text-sm">
+  <div className={cn("grid place-items-center md:grid-cols-2", "gap-8")}>
+    <div className="flex flex-col gap-4">
+      <p className={cn("text-xs uppercase", "animateFadeIn")}>
         India's most trusted preschool network
       </p>
-      <p>
+      <div>
         <h1
           className={cn(
             // "px-2 text-center text-4xl font-extrabold tracking-tighter text-balance text-primary max-lg:font-medium max-sm:px-4 sm:text-5xl lg:text-6xl xl:text-8xl",
-            "text-4xl font-extrabold tracking-wider text-balance text-primary max-lg:font-medium max-sm:px-4 sm:text-5xl lg:text-6xl xl:text-8xl",
+            "text-4xl font-extrabold tracking-wider text-balance text-primary",
+            "sm:text-5xl lg:text-6xl xl:text-8xl",
             heroHeadingFont.className
           )}
         >
           <span className="animateFadeIn delay1">Build </span>
           <span className="animateFadeIn delay2">a </span>
           <span className={cn("animateFadeIn delay3")}>
-            <span
-              className={cn(
-                "bg-linear-to-r from-primary via-(--yellow) to-primary bg-clip-text text-transparent",
-                styles.animatedGradient
-              )}
-            >
-              Foundation
-            </span>
+            <span>Foundation</span>
           </span>
         </h1>
         <h2
           className={cn(
             fredoka.className,
-            "text-2xl font-bold uppercase max-lg:font-medium max-sm:px-4 sm:text-3xl lg:text-4xl xl:text-6xl"
+            "text-[23px] font-bold uppercase",
+            "text-primary xsm:text-2xl sm:text-3xl lg:text-4xl xl:text-6xl"
             // "px-2 text-center text-2xl font-bold tracking-tighter text-balance uppercase max-lg:font-medium max-sm:px-4 sm:text-3xl lg:text-4xl xl:text-6xl"
           )}
         >
-          <span className="animateFadeIn delay4 text-muted-foreground">
-            for a{" "}
-          </span>
-          <span className="animateFadeIn delay5 text-accent">lifetime </span>
-          <span className="animateFadeIn delay6 text-muted-foreground">
-            of{" "}
-          </span>
-          <span className="animateFadeIn delay7 text-accent">learning</span>
+          <span className="animateFadeIn delay4">for a </span>
+          <span className="animateFadeIn delay5">lifetime </span>
+          <span className="animateFadeIn delay6">of </span>
+          <span className="animateFadeIn delay7">learning</span>
         </h2>
-      </p>
-      <p className={cn(styles.bannerContent, "text-3xl text-balance")}>
+      </div>
+      <p
+        className={cn(
+          styles.bannerContent,
+          "animateFadeIn delay8",
+          "text-balance"
+        )}
+      >
         <strong>Kidzee Doddakammanahalli</strong> gives children{" "}
         <strong>aged 2 to 6</strong> a strong, joyful start to their learning
         journey.
       </p>
+      <Button
+        variant={"orangePrimary"}
+        size={"lg"}
+        className={cn("h-12 w-32 rounded-3xl", "animateSlideIn delay9")}
+      >
+        Contact Us
+      </Button>
     </div>
-    <div className="flex">
+    <div className={cn("flex", "animateSlideIn delay10")}>
       <div className="flex flex-col justify-around">
         <HeroStat
           stat={"11 years"}
           message={"of experience"}
-          className={styles.heroStat1}
+          className={cn("translate-x-5")}
         />
         <HeroStat
           stat={"1000+"}
           message={"students taught"}
-          className={styles.heroStat2}
+          className={cn("-translate-x-2")}
         />
         <HeroStat
           stat={"1000+"}
           message={"students taught"}
-          className={styles.heroStat3}
+          className={cn("-translate-x-1")}
         />
         <HeroStat
           stat={"364+"}
           message={"5 star reviews"}
-          className={styles.heroStat4}
+          className={cn("translate-x-8")}
         />
       </div>
-      <Image src={HeroImage} alt={"Hero Section Image"} className="max-w-lg" />
+      <Image
+        src={HeroImage}
+        alt={"Hero Section Image"}
+        className={cn("aspect-square", "h-50 w-50 xsm:h-70 xsm:w-70")}
+      />
     </div>
-    {/* <PentemindImage className={cn(styles.pentemindImage)} /> */}
   </div>
 )
 type HeroStatProps = {
@@ -121,8 +129,8 @@ type HeroStatProps = {
 const HeroStat = ({ stat, message, className }: HeroStatProps) => (
   <div className={cn(className)}>
     <div>
-      <p className="min-w-max text-center text-3xl font-black">{stat}</p>
-      <p className="min-w-max text-center">{message}</p>
+      <p className={cn("min-w-max text-center font-black")}>{stat}</p>
+      <p className={cn("min-w-max text-center", "text-xs")}>{message}</p>
     </div>
   </div>
 )
