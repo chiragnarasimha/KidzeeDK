@@ -1,2 +1,10 @@
-minimumReleaseAge: 10080
+allowBuilds:
+  msw: true
+  sharp: true
+  unrs-resolver: true
+# allowBuilds:
+#   msw: set this to true or false
+#   sharp: set this to true or false
+#   unrs-resolver: set this to true or false
+minimumReleaseAge: 10080 # Time in minutes
 minimumReleaseAgeStrict: false

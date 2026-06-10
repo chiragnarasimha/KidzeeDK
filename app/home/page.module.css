@@ -1,0 +1,43 @@
+.animatedGradient {
+  background-size: 200% 100%;
+  animation: gradient-move 4s ease-in-out infinite;
+}
+
+@keyframes gradient-move {
+  0% {
+    background-position: 100% 0%;
+  }
+  50% {
+    background-position: 0% 0%;
+  }
+  100% {
+    background-position: 100% 0%;
+  }
+}
+
+.banner {
+  display: flex;
+  justify-content: center;
+  margin-top: calc(var(--spacing) * 40);
+}
+
+.bannerContent {
+  max-width: calc(var(--spacing) * 256);
+}
+
+.pentemindImage {
+  max-width: 60rem;
+}
+
+.heroStat1 {
+  translate: 50px 0;
+}
+.heroStat2 {
+  translate: -10px 0;
+}
+.heroStat3 {
+  translate: -4px 0;
+}
+.heroStat4 {
+  translate: 80px 0;
+}

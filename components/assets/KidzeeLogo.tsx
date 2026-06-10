@@ -8,14 +8,14 @@ type SvgProps = {
   textCss?: string
 }
 
-export const KidzeeLogo = ({ className, textCss }: SvgProps) => {
+const KidzeeLogo = ({ className, textCss }: SvgProps) => {
   const router = useRouter()
-  const handleClick = () => router.push("/")
+  const handleClick = () => router.push("/home")
 
   const fillCss = "fill-[#65318E]"
   const borderCss = "fill-[#FFF200]"
   return (
-    <div className={className}>
+    <div className={cn("z-20 cursor-pointer", className)}>
       <svg
         xmlns="http://www.w3.org/2000/svg"
         width="173"
@@ -137,3 +137,4 @@ export const KidzeeLogo = ({ className, textCss }: SvgProps) => {
     </div>
   )
 }
+export default KidzeeLogo

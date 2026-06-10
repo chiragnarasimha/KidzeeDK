@@ -2,14 +2,12 @@ import { cn } from "@/lib/utils"
 import {
   AiBrain01FreeIcons,
   Contact,
-  InformationCircleFreeIcons,
   MapingFreeIcons,
   ProgrammingFlagFreeIcons,
 } from "@hugeicons/core-free-icons"
-import { KidzeeLogo } from "../assets/SvgAssets"
+import { KidzeeLogoMini } from "../assets/CustomIcons"
 import styles from "./Navbar.module.css"
 import NavItem from "./NavItem"
-import { KidzeeLogoMini } from "../assets/CustomIcons"
 
 const Navbar = () => {
   return (

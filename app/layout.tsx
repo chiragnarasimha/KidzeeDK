@@ -1,19 +1,19 @@
-import { Geist_Mono, Inter } from "next/font/google"
+import { Nunito } from "next/font/google"
 
 import NavBar from "@/components/navbar/NavBar"
 import { cn } from "@/lib/utils"
 import "./globals.css"
 // import AppThemeProvider from "@/components/app-theme-provider"
-import styles from "./layout.module.css"
+import KidzeeLogo from "@/components/assets/KidzeeLogo"
 import { Metadata } from "next"
-import { KidzeeLogo } from "@/components/assets/SvgAssets"
+import styles from "./layout.module.css"
 
-const inter = Inter({ subsets: ["latin"], variable: "--font-sans" })
+const nunito = Nunito()
 
-const fontMono = Geist_Mono({
-  subsets: ["latin"],
-  variable: "--font-mono",
-})
+// const fontMono = Geist_Mono({
+//   subsets: ["latin"],
+//   variable: "--font-mono",
+// })
 
 export const metadata: Metadata = {
   title: "Kidzee Doddakammanahalli",
@@ -30,12 +30,7 @@ export default function RootLayout({
     <html
       lang="en"
       suppressHydrationWarning
-      className={cn(
-        "antialiased",
-        fontMono.variable,
-        "font-sans",
-        inter.variable
-      )}
+      className={cn("antialiased", nunito.className)}
     >
       <body className="overflow-hidden">
         <div className={cn(styles.background, "fixed top-0 left-0")} />

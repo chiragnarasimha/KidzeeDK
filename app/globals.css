@@ -45,6 +45,9 @@
   --radius-2xl: calc(var(--radius) * 1.8);
   --radius-3xl: calc(var(--radius) * 2.2);
   --radius-4xl: calc(var(--radius) * 2.6);
+
+  /* Custom Breakpoints */
+  --breakpoint-xxs: 24rem; /* This is to also optimise for very small devices, like iphone mini */
 }
 
 :root {
@@ -54,7 +57,8 @@
   --card-foreground: oklch(0.4355 0.043 279.325);
   --popover: oklch(0.9578 0.0058 264.5321);
   --popover-foreground: oklch(0.4355 0.043 279.325);
-  --primary: oklch(0.5547 0.2503 297.0156);
+  /* --primary: oklch(0.5547 0.2503 297.0156); */
+  --primary: #65318e;
   --primary-foreground: oklch(0.98 0.002 264.5321);
   --secondary: oklch(0.906 0.0117 264.5071);
   --secondary-foreground: oklch(0.4355 0.043 279.325);

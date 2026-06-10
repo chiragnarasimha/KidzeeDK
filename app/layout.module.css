@@ -5,14 +5,7 @@
   /* shorthand for top: 0; right: 0; bottom: 0; left: 0 */
   inset: 0;
   z-index: -1;
-  /* background: linear-gradient( */
-  /*   135deg, */
-  /*   #f8bbd9 0%, */
-  /*   #fdd5b4 25%, */
-  /*   #fff2cc 50%, */
-  /*   #e1f5fe 75%, */
-  /*   #bbdefb 100% */
-  /* ); */
+
   background-image:
     radial-gradient(
       circle at 20% 80%,
