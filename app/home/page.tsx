@@ -47,7 +47,7 @@ const Banner = () => (
       <p
         className={cn(
           "uppercase",
-          "animateFadeIn",
+          "animateFadeIn delay3",
           // "text-xs"
           styles.preTitleText
         )}
@@ -64,9 +64,9 @@ const Banner = () => (
             styles.titleH1Text
           )}
         >
-          <span className="animateFadeIn delay1">Build </span>
-          <span className="animateFadeIn delay2">a </span>
-          <span className={cn("animateFadeIn delay3")}>
+          <span className="animateFadeIn delay4">Build </span>
+          <span className="animateFadeIn delay5">a </span>
+          <span className={cn("animateFadeIn delay6")}>
             <span>Foundation</span>
           </span>
         </h1>
@@ -77,13 +77,13 @@ const Banner = () => (
             styles.subTitleH2Text
           )}
         >
-          <span className="animateFadeIn delay4">For a </span>
-          <span className="animateFadeIn delay5">lifetime </span>
-          <span className="animateFadeIn delay6">of </span>
-          <span className="animateFadeIn delay7">learning</span>
+          <span className="animateFadeIn delay7">For a </span>
+          <span className="animateFadeIn delay8">lifetime </span>
+          <span className="animateFadeIn delay9">of </span>
+          <span className="animateFadeIn delay10">learning</span>
         </h2>
       </div>
-      <p className={cn("animateFadeIn delay8", styles.bannerContent)}>
+      <p className={cn("animateFadeIn delay11", styles.bannerContent)}>
         <strong>Kidzee Doddakammanahalli</strong> gives children{" "}
         <strong>aged 2 to 6</strong> a strong, joyful start to their learning
         journey.
@@ -93,14 +93,14 @@ const Banner = () => (
         size={"lg"}
         className={cn(
           "rounded-4xl md:-translate-x-15",
-          "animateSlideIn delay9",
+          "animateSlideInFromBottom delay12",
           styles.bannerButton
         )}
       >
         Contact Us
       </Button>
     </div>
-    <div className={cn("flex", "animateSlideIn delay10")}>
+    <div className={cn("flex", "animateSlideInFromBottom delay13")}>
       <div className="flex flex-col justify-around">
         <BannerStat
           stat={"11 years"}
@@ -159,12 +159,12 @@ const BannerStat = ({ stat, message, className }: BannerStatProps) => (
 //     <Image
 //       src={IntroImage}
 //       alt={"Introduction Image"}
-//       className="animateSlideIn delay10 w-sm grow-0 md:w-md lg:w-lg"
+//       className="animateSlideInFromBottom delay13 w-sm grow-0 md:w-md lg:w-lg"
 //     />
 //     <div className="flex flex-col gap-3 lg:w-3xl">
 //       <IntroPara
 //         h3="Kidzee Pre-school"
-//         animationClassName={"animateSlideIn delay11"}
+//         animationClassName={"animateSlideInFromBottom delay14"}
 //       >
 //         Kidzee Pre-school is a leading chain of Pre-schools located in India and
 //         Nepal backed by Zee Learn Limited. With more than two decades of
@@ -174,7 +174,7 @@ const BannerStat = ({ stat, message, className }: BannerStatProps) => (
 //       </IntroPara>
 //       <IntroPara
 //         h3="Kidzee Advantage"
-//         animationClassName={"animateSlideIn delay12"}
+//         animationClassName={"animateSlideInFromBottom delay15"}
 //       >
 //         <p>
 //           Kidzee is a leader and a trendsetter in Early Childhood Care and

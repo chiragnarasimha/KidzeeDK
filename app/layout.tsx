@@ -38,7 +38,12 @@ export default function RootLayout({
         {/* <AppThemeProvider> */}
         <NavBar />
         <KidzeeLogo
-          className={cn("mx-auto mt-8", "md:ml-8", styles.kidzeeLogo)}
+          className={cn(
+            "mx-auto mt-8",
+            "md:ml-8",
+            styles.kidzeeLogo,
+            "animateSlideInFromTop delay2"
+          )}
           textCss={cn(styles.kidzeeLogoText)}
         />
         {children}

@@ -8,7 +8,6 @@ import {
 import { KidzeeLogoMini } from "../assets/CustomIcons"
 import styles from "./Navbar.module.css"
 import NavItem from "./NavItem"
-import KidzeeLogo from "../assets/KidzeeLogo"
 
 const Navbar = () => {
   return (
@@ -23,6 +22,7 @@ const Navbar = () => {
       {/* /> */}
       <nav
         className={cn(
+          styles.animations,
           "fixed bottom-0 left-0 z-10 flex w-screen justify-center gap-4 md:top-8 md:bottom-auto"
         )}
       >

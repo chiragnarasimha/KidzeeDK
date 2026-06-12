@@ -22,3 +22,43 @@
 .activeText {
   color: #612595ff;
 }
+
+.animations {
+  opacity: 0;
+  animation: slideInFromBottom 1s cubic-bezier(0.5, -0.01, 0.47, 1) forwards;
+  /* This is needed, or else animation will not work well in safari */
+  will-change: opacity, filter, transform;
+
+  @media (width >= 48rem /* 768px */) {
+    opacity: 0;
+    animation: slideInFromTop 1s cubic-bezier(0.5, -0.01, 0.47, 1) forwards;
+    /* This is needed, or else animation will not work well in safari */
+    will-change: opacity, filter, transform;
+  }
+}
+
+@keyframes slideInFromTop {
+  from {
+    opacity: 0;
+    filter: blur(8px);
+    transform: translateY(-40px);
+  }
+  to {
+    opacity: 1;
+    filter: blur(0px);
+    transform: translateY(0);
+  }
+}
+
+@keyframes slideInFromBottom {
+  from {
+    opacity: 0;
+    filter: blur(8px);
+    transform: translateY(40px);
+  }
+  to {
+    opacity: 1;
+    filter: blur(0px);
+    transform: translateY(0);
+  }
+}
