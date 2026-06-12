@@ -15,14 +15,43 @@
   }
 }
 
-.banner {
-  display: flex;
-  justify-content: center;
-  margin-top: calc(var(--spacing) * 40);
+.preTitleText {
+  font-size: clamp(0.8rem, 3vw, 8rem);
+  @media (width >= 48rem /* 768px */) {
+    font-size: clamp(0.8rem, 1.5vw, 8rem);
+  }
+}
+.titleH1Text {
+  font-size: clamp(1.6rem, 5.9vw, 16rem);
+  @media (width >= 48rem /* 768px */) {
+    font-size: clamp(1.6rem, 3vw, 16rem);
+  }
+}
+
+.subTitleH2Text {
+  font-size: clamp(1.33rem, 4.9vw, 13.2rem);
+  @media (width >= 48rem /* 768px */) {
+    font-size: clamp(1.33rem, 2.5vw, 13.2rem);
+  }
 }
 
 .bannerContent {
-  max-width: calc(var(--spacing) * 256);
+  /* max-width: calc(var(--spacing) * 256); */
+  font-size: clamp(1rem, 3vw, 13.2rem);
+  @media (width >= 48rem /* 768px */) {
+    font-size: clamp(1rem, 2.4vw, 3.5rem);
+  }
+}
+
+.bannerButton {
+  font-size: clamp(1rem, 3vw, 13.2rem);
+  padding: clamp(1rem, 3vw, 13.2rem);
+  width: min-content;
+  border-radius: 10rem;
+  @media (width >= 48rem /* 768px */) {
+    font-size: clamp(1rem, 2vw, 3.5rem);
+    padding: clamp(1rem, 2.4vw, 3.5rem);
+  }
 }
 
 .pentemindImage {

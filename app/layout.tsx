@@ -31,13 +31,14 @@ export default function RootLayout({
         <div className={cn(styles.background, "fixed top-0 left-0")} />
         {/* <AppThemeProvider> */}
         <NavBar />
-        <div className="h-dvh">
-          <KidzeeLogo
-            className={cn("mt-8", "md:w-24 md:translate-x-0", "lg:w-30")}
-            textCss={cn("md:-mt-4 md:text-[7px]", "lg:-mt-3 lg:text-[9px]")}
-          />
-          <div className={cn("p-6")}>{children}</div>
-        </div>
+        <KidzeeLogo
+          className={cn("mx-auto mt-8", "md:fixed md:ml-8", styles.kidzeeLogo)}
+          textCss={cn(
+            // "md:-mt-4 md:text-[7px]", "lg:-mt-3 lg:text-[9px]",
+            styles.kidzeeLogoText
+          )}
+        />
+        <div className={cn("p-6", styles.appContainer)}>{children}</div>
         {/* </AppThemeProvider> */}
       </body>
     </html>

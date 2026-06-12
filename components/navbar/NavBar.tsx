@@ -8,6 +8,7 @@ import {
 import { KidzeeLogoMini } from "../assets/CustomIcons"
 import styles from "./Navbar.module.css"
 import NavItem from "./NavItem"
+import KidzeeLogo from "../assets/KidzeeLogo"
 
 const Navbar = () => {
   return (

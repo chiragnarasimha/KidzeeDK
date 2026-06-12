@@ -7,12 +7,13 @@ import { ReactNode } from "react"
 import styles from "./page.module.css"
 import HeroImage from "@/assets/HeroImage.png"
 import { Button } from "@/components/ui/button"
+import localFont from "next/font/local"
 
-// const marelleBaton2 = localFont({
-//   // src: "../../assets/fonts/MarelleBaton2-Regular.woff2",
-//   src: "../../assets/fonts/MarelleLIGNESNBaton2-Regular.woff2",
-// })
-//
+const marelle2 = localFont({
+  // src: "../../assets/fonts/MarelleBaton2-Regular.woff2",
+  src: "../../assets/fonts/Marelle2-Regular.woff2",
+  weight: "200",
+})
 
 const heroHeadingFont = testFont({ weight: "400" })
 const fredoka = Fredoka()
@@ -39,16 +40,24 @@ export default function Page() {
 const Hero = () => (
   <div className={cn("grid place-items-center md:grid-cols-2", "gap-8")}>
     <div className="flex flex-col gap-4">
-      <p className={cn("text-xs uppercase", "animateFadeIn")}>
+      <p
+        className={cn(
+          "uppercase",
+          "animateFadeIn",
+          // "text-xs"
+          styles.preTitleText
+        )}
+      >
         India's most trusted preschool network
       </p>
       <div>
         <h1
           className={cn(
-            // "px-2 text-center text-4xl font-extrabold tracking-tighter text-balance text-primary max-lg:font-medium max-sm:px-4 sm:text-5xl lg:text-6xl xl:text-8xl",
-            "text-4xl font-extrabold tracking-wider text-balance text-primary",
-            "sm:text-5xl lg:text-6xl xl:text-8xl",
-            heroHeadingFont.className
+            "tracking-wider text-primary",
+            "font-extralight",
+            // heroHeadingFont.className
+            marelle2.className,
+            styles.titleH1Text
           )}
         >
           <span className="animateFadeIn delay1">Build </span>
@@ -60,12 +69,11 @@ const Hero = () => (
         <h2
           className={cn(
             fredoka.className,
-            "text-[23px] font-bold uppercase",
-            "text-primary xsm:text-2xl sm:text-3xl lg:text-4xl xl:text-6xl"
-            // "px-2 text-center text-2xl font-bold tracking-tighter text-balance uppercase max-lg:font-medium max-sm:px-4 sm:text-3xl lg:text-4xl xl:text-6xl"
+            "font-bold text-primary uppercase",
+            styles.subTitleH2Text
           )}
         >
-          <span className="animateFadeIn delay4">for a </span>
+          <span className="animateFadeIn delay4">For a </span>
           <span className="animateFadeIn delay5">lifetime </span>
           <span className="animateFadeIn delay6">of </span>
           <span className="animateFadeIn delay7">learning</span>
@@ -73,9 +81,9 @@ const Hero = () => (
       </div>
       <p
         className={cn(
-          styles.bannerContent,
           "animateFadeIn delay8",
-          "text-balance"
+          "text-balance",
+          styles.bannerContent
         )}
       >
         <strong>Kidzee Doddakammanahalli</strong> gives children{" "}
@@ -85,40 +93,44 @@ const Hero = () => (
       <Button
         variant={"orangePrimary"}
         size={"lg"}
-        className={cn("h-12 w-32 rounded-3xl", "animateSlideIn delay9")}
+        className={cn(
+          "rounded-4xl",
+          "animateSlideIn delay9",
+          styles.bannerButton
+        )}
       >
         Contact Us
       </Button>
     </div>
-    <div className={cn("flex", "animateSlideIn delay10")}>
-      <div className="flex flex-col justify-around">
-        <HeroStat
-          stat={"11 years"}
-          message={"of experience"}
-          className={cn("translate-x-5")}
-        />
-        <HeroStat
-          stat={"1000+"}
-          message={"students taught"}
-          className={cn("-translate-x-2")}
-        />
-        <HeroStat
-          stat={"1000+"}
-          message={"students taught"}
-          className={cn("-translate-x-1")}
-        />
-        <HeroStat
-          stat={"364+"}
-          message={"5 star reviews"}
-          className={cn("translate-x-8")}
-        />
-      </div>
-      <Image
-        src={HeroImage}
-        alt={"Hero Section Image"}
-        className={cn("aspect-square", "h-50 w-50 xsm:h-70 xsm:w-70")}
-      />
-    </div>
+    {/* <div className={cn("flex", "animateSlideIn delay10")}> */}
+    {/*   <div className="flex flex-col justify-around"> */}
+    {/*     <HeroStat */}
+    {/*       stat={"11 years"} */}
+    {/*       message={"of experience"} */}
+    {/*       className={cn("translate-x-5")} */}
+    {/*     /> */}
+    {/*     <HeroStat */}
+    {/*       stat={"1000+"} */}
+    {/*       message={"students taught"} */}
+    {/*       className={cn("-translate-x-2")} */}
+    {/*     /> */}
+    {/*     <HeroStat */}
+    {/*       stat={"1000+"} */}
+    {/*       message={"students taught"} */}
+    {/*       className={cn("-translate-x-1")} */}
+    {/*     /> */}
+    {/*     <HeroStat */}
+    {/*       stat={"364+"} */}
+    {/*       message={"5 star reviews"} */}
+    {/*       className={cn("translate-x-8")} */}
+    {/*     /> */}
+    {/*   </div> */}
+    {/*   <Image */}
+    {/*     src={HeroImage} */}
+    {/*     alt={"Hero Section Image"} */}
+    {/*     className={cn("aspect-square", "h-50 w-50 xsm:h-70 xsm:w-70")} */}
+    {/*   /> */}
+    {/* </div> */}
   </div>
 )
 type HeroStatProps = {

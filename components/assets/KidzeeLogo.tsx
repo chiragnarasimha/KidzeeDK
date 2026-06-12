@@ -23,7 +23,7 @@ const KidzeeLogo = ({ className, textCss }: SvgProps) => {
         viewBox="0 0 173 56"
         fill="none"
         pointerEvents="all"
-        className="-mt-1.5 w-full"
+        className="-mt-1.5 h-full w-full"
         onClick={handleClick}
       >
         <path
@@ -127,7 +127,7 @@ const KidzeeLogo = ({ className, textCss }: SvgProps) => {
       </svg>
       <div
         className={cn(
-          "-mt-2.5 cursor-pointer text-center text-xs font-bold text-primary",
+          "cursor-pointer text-center text-xs font-bold text-primary",
           fillCss,
           textCss
         )}
