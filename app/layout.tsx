@@ -32,11 +32,8 @@ export default function RootLayout({
         {/* <AppThemeProvider> */}
         <NavBar />
         <KidzeeLogo
-          className={cn("mx-auto mt-8", "md:fixed md:ml-8", styles.kidzeeLogo)}
-          textCss={cn(
-            // "md:-mt-4 md:text-[7px]", "lg:-mt-3 lg:text-[9px]",
-            styles.kidzeeLogoText
-          )}
+          className={cn("mx-auto mt-8", "md:ml-8", styles.kidzeeLogo)}
+          textCss={cn(styles.kidzeeLogoText)}
         />
         <div className={cn("p-6", styles.appContainer)}>{children}</div>
         {/* </AppThemeProvider> */}

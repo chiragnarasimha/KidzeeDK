@@ -45,6 +45,6 @@
 
 .appContainer {
   @media (width >= 48rem /* 768px */) {
-    padding-top: clamp(9rem, 12vw, 20rem);
+    padding-top: clamp(9rem, 12vw, 12rem);
   }
 }

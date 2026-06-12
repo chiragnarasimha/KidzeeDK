@@ -35,11 +35,41 @@
   }
 }
 
+.banner {
+  gap: clamp(2rem, 1vw, 10rem);
+}
+
 .bannerContent {
-  /* max-width: calc(var(--spacing) * 256); */
   font-size: clamp(1rem, 3vw, 13.2rem);
+  width: clamp(19rem, 69vw, 200rem);
   @media (width >= 48rem /* 768px */) {
-    font-size: clamp(1rem, 2.4vw, 3.5rem);
+    font-size: clamp(1rem, 2.4vw, 3.7rem);
+    width: clamp(19rem, 35vw, 200rem);
+  }
+}
+
+.bannerImage {
+  --image-size: clamp(15rem, 60vw, 100rem);
+
+  @media (width >= 48rem /* 768px */) {
+    --image-size: clamp(18rem, 30vw, 100rem);
+  }
+  width: var(--image-size);
+  height: var(--image-size);
+}
+
+.bannerStatHeading {
+  font-size: clamp(1rem, 2vw, 10rem);
+
+  @media (width >= 48rem /* 768px */) {
+    font-size: clamp(1rem, 1vw, 10rem);
+  }
+}
+
+.bannerStatContent {
+  font-size: clamp(0.7rem, 2vw, 10rem);
+  @media (width >= 48rem /* 768px */) {
+    font-size: clamp(0.7rem, 0.7vw, 10rem);
   }
 }
 
@@ -49,8 +79,8 @@
   width: min-content;
   border-radius: 10rem;
   @media (width >= 48rem /* 768px */) {
-    font-size: clamp(1rem, 2vw, 3.5rem);
-    padding: clamp(1rem, 2.4vw, 3.5rem);
+    font-size: clamp(1rem, 1.5vw, 3.5rem);
+    padding: clamp(1rem, 1.5vw, 3.5rem);
   }
 }
 
@@ -58,15 +88,15 @@
   max-width: 60rem;
 }
 
-.heroStat1 {
-  translate: 50px 0;
+.bannerStat1 {
+  translate: clamp(1.8rem, 3.9vw, 5rem);
 }
-.heroStat2 {
-  translate: -10px 0;
+.bannerStat2 {
+  translate: clamp(-10rem, -0.5vw, 5rem);
 }
-.heroStat3 {
-  translate: -4px 0;
+.bannerStat3 {
+  translate: clamp(-10rem, -0.1vw, 5rem);
 }
-.heroStat4 {
-  translate: 80px 0;
+.bannerStat4 {
+  translate: clamp(3.1rem, 5vw, 10rem);
 }
