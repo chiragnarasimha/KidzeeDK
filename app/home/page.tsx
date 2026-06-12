@@ -1,13 +1,11 @@
-import IntroImage from "@/assets/Introduction.png"
-import { cn } from "@/lib/utils"
-import { Twinkle_Star as testFont, Fredoka } from "next/font/google"
-import Head from "next/head"
-import Image from "next/image"
-import { ReactNode } from "react"
-import styles from "./page.module.css"
 import HeroImage from "@/assets/HeroImage.png"
 import { Button } from "@/components/ui/button"
+import { cn } from "@/lib/utils"
+import { Fredoka } from "next/font/google"
 import localFont from "next/font/local"
+import Head from "next/head"
+import Image from "next/image"
+import styles from "./page.module.css"
 
 const marelle2 = localFont({
   // src: "../../assets/fonts/MarelleBaton2-Regular.woff2",
@@ -15,7 +13,6 @@ const marelle2 = localFont({
   weight: "200",
 })
 
-const heroHeadingFont = testFont({ weight: "400" })
 const fredoka = Fredoka()
 
 export default function Page() {
@@ -39,8 +36,14 @@ export default function Page() {
 }
 
 const Banner = () => (
-  <div className={cn("grid place-items-center md:grid-cols-2", "gap-8")}>
-    <div className={cn("grid place-items-center", styles.banner)}>
+  <div
+    className={cn(
+      "grid place-items-center md:grid-cols-2",
+      "gap-8",
+      styles.bannerContainer
+    )}
+  >
+    <div className={cn("grid place-items-center", styles.bannerTextContainer)}>
       <p
         className={cn(
           "uppercase",

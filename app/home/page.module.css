@@ -34,8 +34,13 @@
     font-size: clamp(1.33rem, 2.5vw, 13.2rem);
   }
 }
+.bannerContainer {
+  @media (width >= 48rem /* 768px */) {
+    padding-top: clamp(9rem, 12vw, 12rem);
+  }
+}
 
-.banner {
+.bannerTextContainer {
   gap: clamp(2rem, 1vw, 10rem);
 }
 

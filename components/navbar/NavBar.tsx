@@ -23,7 +23,7 @@ const Navbar = () => {
       {/* /> */}
       <nav
         className={cn(
-          "fixed bottom-0 left-0 z-10 flex w-screen justify-center gap-4 md:top-5 md:bottom-auto"
+          "fixed bottom-0 left-0 z-10 flex w-screen justify-center gap-4 md:top-8 md:bottom-auto"
         )}
       >
         <div

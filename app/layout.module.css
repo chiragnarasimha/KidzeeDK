@@ -31,7 +31,9 @@
   width: 10rem;
   @media (width >= 48rem /* 768px */) {
     width: clamp(8rem, 8vw, 200rem);
-    margin-top: clamp(2.2rem, 2.5vw, 20rem);
+    --margin: clamp(2.2rem, 5vw, 20rem);
+    margin-top: var(--margin);
+    margin-left: var(--margin);
   }
 }
 
@@ -40,11 +42,5 @@
 
   @media (width >= 48rem /* 768px */) {
     font-size: clamp(0.7rem, 0.7vw, 1.5rem);
-  }
-}
-
-.appContainer {
-  @media (width >= 48rem /* 768px */) {
-    padding-top: clamp(9rem, 12vw, 12rem);
   }
 }
