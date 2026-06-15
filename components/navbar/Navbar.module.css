@@ -20,7 +20,7 @@
 }
 
 .activeText {
-  color: #612595ff;
+  color: var(--primary);
 }
 
 .animations {

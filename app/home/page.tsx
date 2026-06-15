@@ -6,6 +6,10 @@ import localFont from "next/font/local"
 import Head from "next/head"
 import Image from "next/image"
 import styles from "./page.module.css"
+import { ReactNode } from "react"
+import { Card } from "@/components/ui/card"
+import PreIntroBR from "@/assets/homePage/PreIntroBR.png"
+import PreIntroTL from "@/assets/homePage/PreIntroTL.png"
 
 const marelle2 = localFont({
   // src: "../../assets/fonts/MarelleBaton2-Regular.woff2",
@@ -29,8 +33,8 @@ export default function Page() {
         />
       </Head>
       <Banner />
+      <PreIntro />
       {/* <Intro /> */}
-      <div className="pb-10"></div>
     </>
   )
 }
@@ -39,7 +43,7 @@ const Banner = () => (
   <div
     className={cn(
       "grid place-items-center md:grid-cols-2",
-      "gap-8",
+      "gap-8 md:gap-0",
       styles.bannerContainer
     )}
   >
@@ -154,70 +158,91 @@ const BannerStat = ({ stat, message, className }: BannerStatProps) => (
   </div>
 )
 
-// const Intro = () => (
-//   <section className="flex flex-col items-center lg:flex-row lg:justify-center">
-//     <Image
-//       src={IntroImage}
-//       alt={"Introduction Image"}
-//       className="animateSlideInFromBottom delay13 w-sm grow-0 md:w-md lg:w-lg"
-//     />
-//     <div className="flex flex-col gap-3 lg:w-3xl">
-//       <IntroPara
-//         h3="Kidzee Pre-school"
-//         animationClassName={"animateSlideInFromBottom delay14"}
-//       >
-//         Kidzee Pre-school is a leading chain of Pre-schools located in India and
-//         Nepal backed by Zee Learn Limited. With more than two decades of
-//         experience in the Pre-school industry, Kidzee has nurtured more than
-//         1.5m+ children throughout India. Being one of the largest Pre-schools in
-//         India. Kidzee has 2,500+ centers in 600+ cities in India and Nepal.
-//       </IntroPara>
-//       <IntroPara
-//         h3="Kidzee Advantage"
-//         animationClassName={"animateSlideInFromBottom delay15"}
-//       >
-//         <p>
-//           Kidzee is a leader and a trendsetter in Early Childhood Care and
-//           Education (ECCE). Our business partners’ passion and drive are vital
-//           for our brand’s success.
-//         </p>
-//
-//         <p>
-//           Our Business Partners don't just take the name, they also take our
-//           pedagogy- Péntemind, guidelines to teach, prescribes books/plays to be
-//           followed and so on to the ground.
-//         </p>
-//
-//         <p>
-//           Starting a Pre-school requires a strategic researching, planning,
-//           designing, and organising. Kidzee Professional research, makes this
-//           journey easier and rewarding for all our Business Partners.
-//         </p>
-//
-//         <p>
-//           Secret to Success is Service and Support. We provide pre-opening and
-//           operational support apart from the regular support that is given
-//           additional to all systems and process.
-//         </p>
-//       </IntroPara>
-//     </div>
-//   </section>
-// )
-// type IntroParaType = {
-//   h3: string
-//   animationClassName: string
-//   children: ReactNode
-// }
-// const IntroPara = ({ h3, animationClassName, children }: IntroParaType) => (
-//   <>
-//     <h3
-//       className={cn(
-//         "mb-1 text-xl font-semibold tracking-tight text-primary uppercase",
-//         animationClassName
-//       )}
-//     >
-//       {h3}
-//     </h3>
-//     <div className={animationClassName}>{children}</div>
-//   </>
-// )
+const PreIntro = () => (
+  <section className="grid place-items-center pt-24">
+    <div className={cn("relative h-full", styles.preIntroContainer)}>
+      <Image
+        src={PreIntroTL}
+        alt={"PreIntroDecoration 2"}
+        className="absolute -top-8 -left-8 h-16 w-16"
+      />
+    </div>
+    <Card className={cn("overflow-visible p-7", styles.preIntroContainer)}>
+      <p className={cn(styles.preIntroParagraph)}>
+        Proudly part of <strong>Asia’s largest preschool</strong> network. We
+        blend Kidzee’s award-winning <strong>Péntemind</strong> pedagogy with a
+        hands-on Montessori environment to give your child the{" "}
+        <strong>best start</strong> in life.
+      </p>
+    </Card>
+  </section>
+)
+
+type IntroParaType = {
+  h3: string
+  animationClassName: string
+  children: ReactNode
+}
+const IntroPara = ({ h3, animationClassName, children }: IntroParaType) => (
+  <>
+    <h3
+      className={cn(
+        "mb-1 text-xl font-semibold tracking-tight text-primary uppercase",
+        animationClassName
+      )}
+    >
+      {h3}
+    </h3>
+    <div className={animationClassName}>{children}</div>
+  </>
+)
+
+const Intro = () => (
+  <section className="flex flex-col items-center lg:flex-row lg:justify-center">
+    {/* <Image */}
+    {/*   src={IntroImage} */}
+    {/*   alt={"Introduction Image"} */}
+    {/*   className="animateSlideInFromBottom delay13 w-sm grow-0 md:w-md lg:w-lg" */}
+    {/* /> */}
+    <div className="flex flex-col gap-3 lg:w-3xl">
+      <IntroPara
+        h3="Kidzee Pre-school"
+        animationClassName={"animateSlideInFromBottom delay14"}
+      >
+        Kidzee Pre-school is a leading chain of Pre-schools located in India and
+        Nepal backed by Zee Learn Limited. With more than two decades of
+        experience in the Pre-school industry, Kidzee has nurtured more than
+        1.5m+ children throughout India. Being one of the largest Pre-schools in
+        India. Kidzee has 2,500+ centers in 600+ cities in India and Nepal.
+      </IntroPara>
+      <IntroPara
+        h3="Kidzee Advantage"
+        animationClassName={"animateSlideInFromBottom delay15"}
+      >
+        <p>
+          Kidzee is a leader and a trendsetter in Early Childhood Care and
+          Education (ECCE). Our business partners’ passion and drive are vital
+          for our brand’s success.
+        </p>
+
+        <p>
+          Our Business Partners don't just take the name, they also take our
+          pedagogy- Péntemind, guidelines to teach, prescribes books/plays to be
+          followed and so on to the ground.
+        </p>
+
+        <p>
+          Starting a Pre-school requires a strategic researching, planning,
+          designing, and organising. Kidzee Professional research, makes this
+          journey easier and rewarding for all our Business Partners.
+        </p>
+
+        <p>
+          Secret to Success is Service and Support. We provide pre-opening and
+          operational support apart from the regular support that is given
+          additional to all systems and process.
+        </p>
+      </IntroPara>
+    </div>
+  </section>
+)

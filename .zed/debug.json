@@ -1,0 +1,13 @@
+[
+  {
+    "adapter": "JavaScript",
+    "label": "Debug",
+    "request": "launch",
+    "type": "chrome",
+    "cwd": "/Users/chirag/Dev/KidzeeDK",
+    "runtimeExecutable": "$ZED_CUSTOM_TYPESCRIPT_RUNNER",
+    "env": {},
+    "runtimeArgs": ["--inspect-brk"],
+    "console": "integratedTerminal",
+  },
+]

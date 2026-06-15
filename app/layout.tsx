@@ -4,15 +4,15 @@ import NavBar from "@/components/navbar/NavBar"
 import { cn } from "@/lib/utils"
 import "./globals.css"
 // import AppThemeProvider from "@/components/app-theme-provider"
-import KidzeeLogo from "@/components/assets/KidzeeLogo"
-import { Metadata } from "next"
-import styles from "./layout.module.css"
 import DOODLE_BR from "@/assets/doodles/doodle_br.png"
 import DOODLE_MBL from "@/assets/doodles/doodle_mbl.png"
 import DOODLE_MTR from "@/assets/doodles/doodle_mtr.png"
 import DOODLE_TL from "@/assets/doodles/doodle_tl.png"
 import DOODLE_TR from "@/assets/doodles/doodle_tr.png"
+import KidzeeLogo from "@/components/assets/KidzeeLogo"
+import { Metadata } from "next"
 import Image from "next/image"
+import styles from "./layout.module.css"
 
 const nunito = Nunito()
 
@@ -33,7 +33,7 @@ export default function RootLayout({
       suppressHydrationWarning
       className={cn("antialiased", nunito.className)}
     >
-      <body className="pb-20 xsm:pb-5">
+      <body className="xsm:pb-5">
         <Background />
         {/* <AppThemeProvider> */}
         <NavBar />
@@ -48,6 +48,7 @@ export default function RootLayout({
         />
         {children}
         {/* </AppThemeProvider> */}
+        <div className="mb-128"></div>
       </body>
     </html>
   )

@@ -23,13 +23,13 @@ const Navbar = () => {
       <nav
         className={cn(
           styles.animations,
-          "fixed bottom-0 left-0 z-10 flex w-screen justify-center gap-4 md:top-8 md:bottom-auto"
+          "fixed bottom-0 left-0 z-10 flex w-screen justify-center md:top-8 md:bottom-auto"
         )}
       >
         <div
           className={cn(
-            "z-10 flex w-full flex-row justify-around bg-background shadow-md ring-foreground/10 md:w-auto md:rounded-xl md:bg-card/20 md:backdrop-blur-2xl",
-            "ring-1 after:scale-85 after:rounded-xl after:bg-foreground/20 after:opacity-60 after:transition-all after:duration-500",
+            "z-10 flex w-full flex-row justify-around bg-card shadow-lg ring-foreground/10 md:w-auto md:rounded-xl",
+            "ring-1 after:scale-85 after:rounded-xl after:bg-primary/20 after:opacity-60 after:transition-all after:duration-500",
             styles.buttonGroup
           )}
         >
