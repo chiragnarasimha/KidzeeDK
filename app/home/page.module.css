@@ -17,25 +17,25 @@
 
 .preTitleText {
   font-size: clamp(0.8rem, 3vw, 8rem);
-  @media (width >= 48rem /* 768px */) {
+  @media (width >= 48rem /* md: 768px */) {
     font-size: clamp(0.8rem, 1.5vw, 8rem);
   }
 }
 .titleH1Text {
   font-size: clamp(1.6rem, 5.9vw, 16rem);
-  @media (width >= 48rem /* 768px */) {
+  @media (width >= 48rem /* md: 768px */) {
     font-size: clamp(1.6rem, 3vw, 16rem);
   }
 }
 
 .subTitleH2Text {
   font-size: clamp(1.33rem, 4.9vw, 13.2rem);
-  @media (width >= 48rem /* 768px */) {
+  @media (width >= 48rem /* md: 768px */) {
     font-size: clamp(1.33rem, 2.5vw, 13.2rem);
   }
 }
 .bannerContainer {
-  @media (width >= 48rem /* 768px */) {
+  @media (width >= 48rem /* md: 768px */) {
     padding-top: clamp(6rem, 8vw, 12rem);
   }
 }
@@ -44,11 +44,23 @@
   gap: clamp(2rem, 1vw, 10rem);
 }
 
-.bannerContent {
-  font-size: clamp(1rem, 3vw, 13.2rem);
+.sectionContent {
   width: clamp(19rem, 69vw, 200rem);
-  @media (width >= 48rem /* 768px */) {
+  @media (width >= 48rem /* md: 768px */) {
+    width: clamp(19rem, 85vw, 400rem);
+  }
+}
+
+.pContent {
+  font-size: clamp(1rem, 3vw, 13.2rem);
+  @media (width >= 48rem /* md: 768px */) {
     font-size: clamp(1rem, 1.5vw, 3.7rem);
+  }
+}
+
+.bannerContent {
+  width: clamp(19rem, 69vw, 200rem);
+  @media (width >= 48rem /* md: 768px */) {
     width: clamp(19rem, 35vw, 200rem);
   }
 }
@@ -56,7 +68,7 @@
 .bannerImage {
   --image-size: clamp(15rem, 60vw, 100rem);
 
-  @media (width >= 48rem /* 768px */) {
+  @media (width >= 48rem /* md: 768px */) {
     --image-size: clamp(18rem, 30vw, 100rem);
   }
   width: var(--image-size);
@@ -66,14 +78,14 @@
 .bannerStatHeading {
   font-size: clamp(1rem, 2vw, 10rem);
 
-  @media (width >= 48rem /* 768px */) {
+  @media (width >= 48rem /* md: 768px */) {
     font-size: clamp(1rem, 1vw, 10rem);
   }
 }
 
 .bannerStatContent {
   font-size: clamp(0.7rem, 2vw, 10rem);
-  @media (width >= 48rem /* 768px */) {
+  @media (width >= 48rem /* md: 768px */) {
     font-size: clamp(0.7rem, 0.7vw, 10rem);
   }
 }
@@ -83,14 +95,14 @@
   padding: clamp(1rem, 3vw, 13.2rem);
   width: min-content;
   border-radius: 10rem;
-  @media (width >= 48rem /* 768px */) {
+  @media (width >= 48rem /* md: 768px */) {
     font-size: clamp(1rem, 1.5vw, 3.5rem);
     padding: clamp(1rem, 1.5vw, 3.5rem);
   }
 }
 .preIntroContainer {
   width: clamp(22rem, 83dvw, 64rem);
-  @media (width >= 48rem /* 768px */) {
+  @media (width >= 48rem /* md: 768px */) {
     width: clamp(42rem, 85dvw, 100rem);
   }
 }

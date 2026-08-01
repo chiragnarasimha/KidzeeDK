@@ -27,9 +27,36 @@
   background-repeat: no-repeat;
 }
 
+.magicpattern {
+  background-color: #e5e5f7;
+  background-image:
+    radial-gradient(#6d45f7 1.5px, transparent 1.5px),
+    radial-gradient(#6d45f7 1.5px, transparent 1.5px);
+  background-size:
+    40px 40px,
+    40px 40px;
+  opacity: 20%;
+  background-repeat: repeat, repeat;
+  background-position:
+    0 0,
+    160px 160px;
+}
+
+/* /* ...or add this class to an element */
+/* .polka { */
+/*   background-image: */
+/*     radial-gradient(rgb(100, 49, 142) 10%, transparent 10%), */
+/*     radial-gradient(rgb(100, 49, 142) 10%, transparent 10%); */
+/*   background-position: */
+/*     0px 0px, */
+/*     8px 8px; */
+/*   background-size: 16px 16px; */
+/*   background-color: rgb(255, 255, 255); */
+/* } */
+
 .kidzeeLogo {
   width: 10rem;
-  @media (width >= 48rem /* 768px */) {
+  @media (width >= 48rem /* md: 768px */) {
     width: clamp(8rem, 8vw, 200rem);
     --margin: clamp(2.2rem, 5vw, 20rem);
     margin-top: var(--margin);
@@ -40,7 +67,7 @@
 .kidzeeLogoText {
   font-size: 0.7rem;
 
-  @media (width >= 48rem /* 768px */) {
+  @media (width >= 48rem /* md: 768px */) {
     font-size: clamp(0.7rem, 0.7vw, 1.5rem);
   }
 }

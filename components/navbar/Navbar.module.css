@@ -29,7 +29,7 @@
   /* This is needed, or else animation will not work well in safari */
   will-change: opacity, filter, transform;
 
-  @media (width >= 48rem /* 768px */) {
+  @media (width >= 48rem /* md:768px */) {
     opacity: 0;
     animation: slideInFromTop 1s cubic-bezier(0.5, -0.01, 0.47, 1) forwards;
     /* This is needed, or else animation will not work well in safari */

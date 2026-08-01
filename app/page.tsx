@@ -1,8 +1,10 @@
 "use client"
 import { useRouter } from "next/navigation"
+import { useEffect, useEffectEvent } from "react"
 
 export default function Page() {
   const router = useRouter()
-  router.prefetch("/home")
-  router.push("/home")
+  // NOTE: This use effect is important to ensure home page is loaded after mount
+  const loadHomePage = useEffectEvent(() => router.push("/home"))
+  useEffect(loadHomePage, [])
 }

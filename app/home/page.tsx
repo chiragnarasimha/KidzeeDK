@@ -1,5 +1,7 @@
 import HeroImage from "@/assets/HeroImage.png"
+import PreIntroTL from "@/assets/homePage/PreIntroTL.png"
 import { Button } from "@/components/ui/button"
+import { Card } from "@/components/ui/card"
 import { cn } from "@/lib/utils"
 import { Fredoka } from "next/font/google"
 import localFont from "next/font/local"
@@ -7,9 +9,7 @@ import Head from "next/head"
 import Image from "next/image"
 import styles from "./page.module.css"
 import { ReactNode } from "react"
-import { Card } from "@/components/ui/card"
-import PreIntroBR from "@/assets/homePage/PreIntroBR.png"
-import PreIntroTL from "@/assets/homePage/PreIntroTL.png"
+import PentemindImage from "@/components/assets/PentemindImage"
 
 const marelle2 = localFont({
   // src: "../../assets/fonts/MarelleBaton2-Regular.woff2",
@@ -34,10 +34,30 @@ export default function Page() {
       </Head>
       <Banner />
       <PreIntro />
+      <Intro />
+
       {/* <Intro /> */}
     </>
   )
 }
+
+const H2 = ({ children }: { children: ReactNode }) => {
+  return (
+    <h2
+      className={cn(
+        fredoka.className,
+        "font-bold text-primary uppercase",
+        styles.subTitleH2Text
+      )}
+    >
+      {children}
+    </h2>
+  )
+}
+
+const P = ({ children }: { children: ReactNode }) => (
+  <p className={styles.pContent}>{children}</p>
+)
 
 const Banner = () => (
   <div
@@ -59,21 +79,13 @@ const Banner = () => (
         India's most trusted preschool network
       </p>
       <div>
-        <h1
-          className={cn(
-            "tracking-wider text-primary",
-            "font-extralight",
-            // heroHeadingFont.className
-            marelle2.className,
-            styles.titleH1Text
-          )}
-        >
+        <H2>
           <span className="animateFadeIn delay4">Build </span>
           <span className="animateFadeIn delay5">a </span>
           <span className={cn("animateFadeIn delay6")}>
             <span>Foundation</span>
           </span>
-        </h1>
+        </H2>
         <h2
           className={cn(
             fredoka.className,
@@ -87,22 +99,27 @@ const Banner = () => (
           <span className="animateFadeIn delay10">learning</span>
         </h2>
       </div>
-      <p className={cn("animateFadeIn delay11", styles.bannerContent)}>
-        <strong>Kidzee Doddakammanahalli</strong> gives children{" "}
-        <strong>aged 2 to 6</strong> a strong, joyful start to their learning
-        journey.
-      </p>
-      <Button
-        variant={"orangePrimary"}
-        size={"lg"}
-        className={cn(
-          "rounded-4xl md:-translate-x-15",
-          "animateSlideInFromBottom delay12",
-          styles.bannerButton
-        )}
-      >
-        Contact Us
-      </Button>
+      <div className={cn("animateFadeIn delay11", styles.bannerContent)}>
+        <P>
+          <strong>Kidzee Doddakammanahalli</strong> gives children{" "}
+          <strong>aged 2 to 6</strong> a strong, joyful start to their learning
+          journey.
+        </P>
+      </div>
+      <div className="flex w-full">
+        <Button
+          variant={"orangePrimary"}
+          size={"lg"}
+          className={cn(
+            // "rounded-4xl md:-translate-x-15",
+            "rounded-4xl",
+            "animateSlideInFromBottom delay12",
+            styles.bannerButton
+          )}
+        >
+          Enquire Now
+        </Button>
+      </div>
     </div>
     <div className={cn("flex", "animateSlideInFromBottom delay13")}>
       <div className="flex flex-col justify-around">
@@ -169,80 +186,46 @@ const PreIntro = () => (
     </div>
     <Card className={cn("overflow-visible p-7", styles.preIntroContainer)}>
       <p className={cn(styles.preIntroParagraph)}>
-        Proudly part of <strong>Asia’s largest preschool</strong> network. We
-        blend Kidzee’s award-winning <strong>Péntemind</strong> pedagogy with a
-        hands-on Montessori environment to give your child the{" "}
+        Proudly part of <strong>India's most trusted preschool network.</strong>{" "}
+        We blend Kidzee’s award-winning <strong>Péntemind</strong> pedagogy with
+        warm, hands-on, play-based learning to give your child the{" "}
         <strong>best start</strong> in life.
       </p>
     </Card>
   </section>
 )
 
-type IntroParaType = {
-  h3: string
-  animationClassName: string
-  children: ReactNode
-}
-const IntroPara = ({ h3, animationClassName, children }: IntroParaType) => (
-  <>
-    <h3
-      className={cn(
-        "mb-1 text-xl font-semibold tracking-tight text-primary uppercase",
-        animationClassName
-      )}
-    >
-      {h3}
-    </h3>
-    <div className={animationClassName}>{children}</div>
-  </>
-)
-
-const Intro = () => (
-  <section className="flex flex-col items-center lg:flex-row lg:justify-center">
-    {/* <Image */}
-    {/*   src={IntroImage} */}
-    {/*   alt={"Introduction Image"} */}
-    {/*   className="animateSlideInFromBottom delay13 w-sm grow-0 md:w-md lg:w-lg" */}
-    {/* /> */}
-    <div className="flex flex-col gap-3 lg:w-3xl">
-      <IntroPara
-        h3="Kidzee Pre-school"
-        animationClassName={"animateSlideInFromBottom delay14"}
-      >
-        Kidzee Pre-school is a leading chain of Pre-schools located in India and
-        Nepal backed by Zee Learn Limited. With more than two decades of
-        experience in the Pre-school industry, Kidzee has nurtured more than
-        1.5m+ children throughout India. Being one of the largest Pre-schools in
-        India. Kidzee has 2,500+ centers in 600+ cities in India and Nepal.
-      </IntroPara>
-      <IntroPara
-        h3="Kidzee Advantage"
-        animationClassName={"animateSlideInFromBottom delay15"}
-      >
-        <p>
-          Kidzee is a leader and a trendsetter in Early Childhood Care and
-          Education (ECCE). Our business partners’ passion and drive are vital
-          for our brand’s success.
-        </p>
-
-        <p>
-          Our Business Partners don't just take the name, they also take our
-          pedagogy- Péntemind, guidelines to teach, prescribes books/plays to be
-          followed and so on to the ground.
-        </p>
-
-        <p>
-          Starting a Pre-school requires a strategic researching, planning,
-          designing, and organising. Kidzee Professional research, makes this
-          journey easier and rewarding for all our Business Partners.
-        </p>
-
-        <p>
-          Secret to Success is Service and Support. We provide pre-opening and
-          operational support apart from the regular support that is given
-          additional to all systems and process.
-        </p>
-      </IntroPara>
-    </div>
+const GeneralSection = ({ children }: { children: ReactNode }) => (
+  <section className="grid place-items-center pt-24">
+    <div className={cn("flex flex-col", styles.sectionContent)}>{children}</div>
   </section>
 )
+
+const Intro = () => {
+  return (
+    <>
+      <GeneralSection>
+        <H2>Why Kidzee Doddakammanahalli?</H2>
+        <div className="flex flex-col items-center justify-center gap-4">
+          <P>
+            Choosing the right preschool is one of the more important decisions
+            parents make in the early years. At Kidzee Doddakammanahalli, we
+            take that responsibility seriously. Our centre combines the backing
+            of a nationally recognised curriculum with the familiarity and care
+            of a local school that is genuinely invested in your child.
+          </P>
+          <P>
+            We follow the Péntemind pedagogy, Kidzee's research-backed learning
+            framework that develops five dimensions of the mind: empathetic,
+            conscientious, focused, analytical and inventive. Every activity,
+            every session and every interaction at our centre is designed with
+            your child's overall development in mind.
+          </P>
+        </div>
+      </GeneralSection>
+      <div className="grid place-items-center">
+        <PentemindImage className="w-[90%] pt-8 md:w-[80%]" />
+      </div>
+    </>
+  )
+}

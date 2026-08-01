@@ -1,6 +1,6 @@
 import "google.maps"
 let map: google.maps.Place
-map.
+// map.
 export const REVIEWS_DATA = {
   name: "places/ChIJr86Q5ttqrjsRj1MmkJcRPlc",
   id: "ChIJr86Q5ttqrjsRj1MmkJcRPlc",

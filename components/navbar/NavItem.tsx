@@ -23,7 +23,6 @@ const NavItem = ({ page, icon }: GroupItemProps) => {
         /* Position relative is needed because the parent is rendering an after pseudo element with position relative. We want to make sure that the buttons will render on top of the pseudo element*/
         "relative"
       )}
-      onClick={handleClick}
     >
       <input
         type="radio"
@@ -35,13 +34,10 @@ const NavItem = ({ page, icon }: GroupItemProps) => {
         onClick={handleClick}
       />
 
-      <div
-        className="flex h-14 min-w-16 flex-col items-center justify-center px-3 md:h-10 md:flex-row md:gap-1"
-        onClick={handleClick}
-      >
+      <div className="flex h-14 flex-col items-center justify-center px-3 md:h-10 md:flex-row md:gap-1 md:px-2 lg:h-12 lg:w-24 xl:h-12 xl:w-30">
         <HugeiconsIcon
           icon={icon}
-          className={"[&svg]:w-5 md:[&svg]:w-5"}
+          className={"[&svg]:w-5 md:[&svg]:w-4 lg:[&svg]:w-5"}
           color={defaultChecked ? "#612595" : ""}
         />
         <span
