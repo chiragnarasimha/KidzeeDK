@@ -15,7 +15,11 @@ const KidzeeLogo = ({ className, textCss }: SvgProps) => {
   const fillCss = "fill-[#65318E]"
   const borderCss = "fill-[#FFF200]"
   return (
-    <div className={cn("z-20 cursor-pointer", className)}>
+    <button
+      className={cn("cursor-pointer", className)}
+      onClick={handleClick}
+      type="button"
+    >
       <svg
         xmlns="http://www.w3.org/2000/svg"
         width="173"
@@ -24,8 +28,8 @@ const KidzeeLogo = ({ className, textCss }: SvgProps) => {
         fill="none"
         pointerEvents="all"
         className="-mt-1.5 h-full w-full"
-        onClick={handleClick}
       >
+        <title>Kidzee Logo</title>
         <path
           d="M42.2424 40.046C41.4733 41.9415 39.7293 43.2464 37.6831 43.4456C35.218 43.6791 29.9103 44.2491 29.7111 44.2491C28.2005 44.2491 26.7242 43.6241 25.6874 42.5116C24.8497 41.6256 24.0188 40.7397 23.1743 39.8537C23.4009 42.7039 21.3203 45.2862 18.4433 45.6776C16.3971 45.9523 12.2566 46.5155 11.5151 46.5979C8.88521 46.8932 6.53002 44.6818 6.11117 42.0239L1.80591 14.4635C1.58618 13.0968 1.93637 11.7095 2.78094 10.5626C3.68731 9.32638 5.10867 8.48164 6.67422 8.255C8.86461 7.92535 11.0619 7.6163 13.2591 7.32098C14.8247 7.10808 16.4246 7.52702 17.6331 8.46104C18.409 9.05167 18.9926 9.82086 19.3359 10.6862C20.0363 9.78652 20.7367 8.88684 21.4439 7.98716C22.3915 6.78529 23.8403 5.9955 25.4196 5.81694C28.07 5.51475 30.748 5.23317 33.3915 4.97906C35.6918 4.75243 37.8685 5.83067 38.9534 7.73305C40.052 9.64916 39.8117 11.998 38.3491 13.7218C35.733 16.7917 33.1306 19.9234 30.5969 23.0482C34.1949 26.7843 37.7792 30.6234 41.2467 34.4488C42.6338 35.9803 43.0183 38.123 42.2424 40.046Z"
           className={fillCss}
@@ -134,7 +138,7 @@ const KidzeeLogo = ({ className, textCss }: SvgProps) => {
       >
         Nurturing Gen-Next
       </div>
-    </div>
+    </button>
   )
 }
 export default KidzeeLogo

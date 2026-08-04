@@ -12,6 +12,7 @@ import KidzeeLogo from "@/components/assets/KidzeeLogo"
 import { Metadata } from "next"
 import Image from "next/image"
 import styles from "./layout.module.css"
+import ContentContainer from "@/components/customUi/content-container"
 
 const nunito = Nunito()
 
@@ -33,20 +34,21 @@ export default function RootLayout({
       className={cn("antialiased", nunito.className)}
     >
       <body className="xsm:pb-5">
+        {/* <body className="xsm:pb-5"> */}
         <Background />
         {/* <AppThemeProvider> */}
         <NavBar />
-        <KidzeeLogo
-          className={cn(
-            "mx-auto mt-8",
-            "md:ml-8",
-            styles.kidzeeLogo,
-            "animateSlideInFromTop delay2"
-          )}
-          textCss={cn(styles.kidzeeLogoText)}
-        />
-        {children}
         {/* </AppThemeProvider> */}
+        {/* <div className=""> */}
+        {/* </div> */}
+        <ContentContainer className="mt-8 mb-8 flex w-full md:mb-0">
+          <KidzeeLogo
+            className={cn(styles.kidzeeLogo, "animateSlideInFromTop delay2")}
+            textCss={cn(styles.kidzeeLogoText)}
+          />
+        </ContentContainer>
+
+        {children}
         <div className="mb-128"></div>
       </body>
     </html>

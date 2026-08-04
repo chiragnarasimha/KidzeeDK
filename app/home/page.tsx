@@ -1,5 +1,6 @@
 import HeroImage from "@/assets/HeroImage.png"
 import PreIntroTL from "@/assets/homePage/PreIntroTL.png"
+import PentemindImage from "@/components/assets/PentemindImage"
 import { Button } from "@/components/ui/button"
 import { Card } from "@/components/ui/card"
 import { cn } from "@/lib/utils"
@@ -7,9 +8,9 @@ import { Fredoka } from "next/font/google"
 import localFont from "next/font/local"
 import Head from "next/head"
 import Image from "next/image"
-import styles from "./page.module.css"
 import { ReactNode } from "react"
-import PentemindImage from "@/components/assets/PentemindImage"
+import styles from "./page.module.css"
+import ContentContainer from "@/components/customUi/content-container"
 
 const marelle2 = localFont({
   // src: "../../assets/fonts/MarelleBaton2-Regular.woff2",
@@ -33,8 +34,8 @@ export default function Page() {
         />
       </Head>
       <Banner />
-      <PreIntro />
-      <Intro />
+      {/* <PreIntro /> */}
+      {/* <Intro /> */}
 
       {/* <Intro /> */}
     </>
@@ -60,97 +61,118 @@ const P = ({ children }: { children: ReactNode }) => (
 )
 
 const Banner = () => (
-  <div
-    className={cn(
-      "grid place-items-center md:grid-cols-2",
-      "gap-8 md:gap-0",
-      styles.bannerContainer
-    )}
-  >
-    <div className={cn("grid place-items-center", styles.bannerTextContainer)}>
-      <p
+  <ContentContainer>
+    <div
+      className={cn(
+        "grid place-content-around md:grid-cols-2",
+        // "w-full gap-8",
+        // "w-full",
+        styles.bannerContainer
+      )}
+    >
+      <div className={cn("grid", styles.bannerTextContainer)}>
+        <p
+          className={cn(
+            "uppercase",
+            "animateFadeIn delay3",
+            // "text-xs"
+            styles.preTitleText
+          )}
+        >
+          India's most trusted preschool network
+        </p>
+        <div>
+          <h1
+            className={cn(
+              // "px-2 text-center text-4xl font-extrabold tracking-tighter text-balance text-primary max-lg:font-medium max-sm:px-4 sm:text-5xl lg:text-6xl xl:text-8xl",
+              // "text-4xl font-extrabold tracking-wider text-balance text-primary",
+              // "sm:text-5xl lg:text-6xl xl:text-8xl",
+              // heroHeadingFont.className
+              // "tracking-wider text-primary",
+              "text-primary",
+              "font-extralight",
+              // heroHeadingFont.className
+              marelle2.className,
+              styles.titleH1Text
+            )}
+          >
+            <span className="animateFadeIn delay4">Build </span>
+            <span className="animateFadeIn delay5">a </span>
+            <span className={cn("animateFadeIn delay6")}>
+              <span>Foundation</span>
+            </span>
+          </h1>
+          <h2
+            className={cn(
+              fredoka.className,
+              "font-bold text-primary uppercase",
+              styles.subTitleH2Text
+            )}
+          >
+            <span className="animateFadeIn delay7">For a </span>
+            <span className="animateFadeIn delay8">lifetime </span>
+            <span className="animateFadeIn delay9">of </span>
+            <span className="animateFadeIn delay10">learning</span>
+          </h2>
+        </div>
+        <div className={cn("animateFadeIn delay11", styles.bannerContent)}>
+          <P>
+            <strong>Kidzee Doddakammanahalli</strong> gives children{" "}
+            <strong>aged 2 to 6</strong> a strong, joyful start to their
+            learning journey.
+          </P>
+        </div>
+        <div className="flex w-full">
+          <Button
+            variant={"orangePrimary"}
+            size={"lg"}
+            className={cn(
+              // "rounded-4xl md:-translate-x-15",
+              "rounded-4xl",
+              "animateSlideInFromBottom delay12",
+              styles.bannerButton
+            )}
+          >
+            Enquire Now
+          </Button>
+        </div>
+      </div>
+      <div
         className={cn(
-          "uppercase",
-          "animateFadeIn delay3",
-          // "text-xs"
-          styles.preTitleText
+          "flex justify-center",
+          "animateSlideInFromBottom delay13"
         )}
       >
-        India's most trusted preschool network
-      </p>
-      <div>
-        <H2>
-          <span className="animateFadeIn delay4">Build </span>
-          <span className="animateFadeIn delay5">a </span>
-          <span className={cn("animateFadeIn delay6")}>
-            <span>Foundation</span>
-          </span>
-        </H2>
-        <h2
-          className={cn(
-            fredoka.className,
-            "font-bold text-primary uppercase",
-            styles.subTitleH2Text
-          )}
-        >
-          <span className="animateFadeIn delay7">For a </span>
-          <span className="animateFadeIn delay8">lifetime </span>
-          <span className="animateFadeIn delay9">of </span>
-          <span className="animateFadeIn delay10">learning</span>
-        </h2>
-      </div>
-      <div className={cn("animateFadeIn delay11", styles.bannerContent)}>
-        <P>
-          <strong>Kidzee Doddakammanahalli</strong> gives children{" "}
-          <strong>aged 2 to 6</strong> a strong, joyful start to their learning
-          journey.
-        </P>
-      </div>
-      <div className="flex w-full">
-        <Button
-          variant={"orangePrimary"}
-          size={"lg"}
-          className={cn(
-            // "rounded-4xl md:-translate-x-15",
-            "rounded-4xl",
-            "animateSlideInFromBottom delay12",
-            styles.bannerButton
-          )}
-        >
-          Enquire Now
-        </Button>
+        <div className="flex flex-col justify-around">
+          <BannerStat
+            stat={"11 years"}
+            message={"of experience"}
+            className={cn(styles.bannerStat1)}
+          />
+          <BannerStat
+            stat={"1001+"}
+            message={"students taught"}
+            className={cn(styles.bannerStat2)}
+          />
+          <BannerStat
+            stat={"1001+"}
+            message={"students taught"}
+            className={cn(styles.bannerStat3)}
+          />
+          <BannerStat
+            stat={"365+"}
+            message={"6 star reviews"}
+            className={cn(styles.bannerStat4)}
+          />
+        </div>
+        <Image
+          src={HeroImage}
+          alt={"Hero Section Image"}
+          className={cn("aspect-square", styles.bannerImage)}
+        />
       </div>
     </div>
-    <div className={cn("flex", "animateSlideInFromBottom delay13")}>
-      <div className="flex flex-col justify-around">
-        <BannerStat
-          stat={"11 years"}
-          message={"of experience"}
-          className={cn(styles.bannerStat1)}
-        />
-        <BannerStat
-          stat={"1001+"}
-          message={"students taught"}
-          className={cn(styles.bannerStat2)}
-        />
-        <BannerStat
-          stat={"1001+"}
-          message={"students taught"}
-          className={cn(styles.bannerStat3)}
-        />
-        <BannerStat
-          stat={"365+"}
-          message={"6 star reviews"}
-          className={cn(styles.bannerStat4)}
-        />
-      </div>
-      <Image
-        src={HeroImage}
-        alt={"Hero Section Image"}
-        className={cn("aspect-square", styles.bannerImage)}
-      />
-    </div>
-  </div>
+  </ContentContainer>
 )
 type BannerStatProps = {
   stat: string

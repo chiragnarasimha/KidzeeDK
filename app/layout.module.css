@@ -58,9 +58,9 @@
   width: 10rem;
   @media (width >= 48rem /* md: 768px */) {
     width: clamp(8rem, 8vw, 200rem);
-    --margin: clamp(2.2rem, 5vw, 20rem);
-    margin-top: var(--margin);
-    margin-left: var(--margin);
+    /* --margin: clamp(2.2rem, 5vw, 20rem); */
+    /* margin-top: var(--margin); */
+    /* margin-left: var(--margin); */
   }
 }
 

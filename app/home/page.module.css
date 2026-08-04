@@ -17,31 +17,31 @@
 
 .preTitleText {
   font-size: clamp(0.8rem, 3vw, 8rem);
+  padding-bottom: clamp(0.8rem, 3vw, 8rem);
   @media (width >= 48rem /* md: 768px */) {
-    font-size: clamp(0.8rem, 1.5vw, 8rem);
+    font-size: clamp(0.8rem, 1.25vw, 1.5rem);
+    padding-bottom: clamp(0.8rem, 1.25vw, 1.5rem);
   }
 }
 .titleH1Text {
   font-size: clamp(1.6rem, 5.9vw, 16rem);
+  padding-bottom: clamp(2px, 1vw, 16rem);
   @media (width >= 48rem /* md: 768px */) {
-    font-size: clamp(1.6rem, 3vw, 16rem);
+    font-size: clamp(1.6rem, 2.7vw, 3.25rem);
+    padding-bottom: clamp(2px, 2.7vw, 3.25rem);
   }
 }
 
 .subTitleH2Text {
   font-size: clamp(1.33rem, 4.9vw, 13.2rem);
   @media (width >= 48rem /* md: 768px */) {
-    font-size: clamp(1.33rem, 2.5vw, 13.2rem);
+    font-size: clamp(1.33rem, 2.1vw, 2.53rem);
   }
 }
 .bannerContainer {
   @media (width >= 48rem /* md: 768px */) {
-    padding-top: clamp(6rem, 8vw, 12rem);
+    padding-top: clamp(6rem, 8vw, 2rem);
   }
-}
-
-.bannerTextContainer {
-  gap: clamp(2rem, 1vw, 10rem);
 }
 
 .sectionContent {
@@ -54,14 +54,14 @@
 .pContent {
   font-size: clamp(1rem, 3vw, 13.2rem);
   @media (width >= 48rem /* md: 768px */) {
-    font-size: clamp(1rem, 1.5vw, 3.7rem);
+    font-size: clamp(1rem, 1.5vw, 2rem);
   }
 }
 
 .bannerContent {
-  width: clamp(19rem, 69vw, 200rem);
+  width: clamp(19rem, 69vw, 100rem);
   @media (width >= 48rem /* md: 768px */) {
-    width: clamp(19rem, 35vw, 200rem);
+    width: clamp(19rem, 30vw, 40rem);
   }
 }
 
@@ -69,7 +69,7 @@
   --image-size: clamp(15rem, 60vw, 100rem);
 
   @media (width >= 48rem /* md: 768px */) {
-    --image-size: clamp(18rem, 30vw, 100rem);
+    --image-size: clamp(18rem, 25vw, 35rem);
   }
   width: var(--image-size);
   height: var(--image-size);
@@ -79,14 +79,14 @@
   font-size: clamp(1rem, 2vw, 10rem);
 
   @media (width >= 48rem /* md: 768px */) {
-    font-size: clamp(1rem, 1vw, 10rem);
+    font-size: clamp(1rem, 1vw, 1.7rem);
   }
 }
 
 .bannerStatContent {
   font-size: clamp(0.7rem, 2vw, 10rem);
   @media (width >= 48rem /* md: 768px */) {
-    font-size: clamp(0.7rem, 0.7vw, 10rem);
+    font-size: clamp(0.7rem, 0.7vw, 1.2rem);
   }
 }
 
@@ -96,8 +96,8 @@
   width: min-content;
   border-radius: 10rem;
   @media (width >= 48rem /* md: 768px */) {
-    font-size: clamp(1rem, 1.5vw, 3.5rem);
-    padding: clamp(1rem, 1.5vw, 3.5rem);
+    font-size: clamp(1rem, 1.5vw, 2.2rem);
+    padding: clamp(1rem, 1.5vw, 2rem);
   }
 }
 .preIntroContainer {
@@ -116,7 +116,7 @@
 }
 
 .bannerStat1 {
-  translate: clamp(1.8rem, 3.9vw, 5rem);
+  translate: clamp(1.8rem, 2.9vw, 3.5rem);
 }
 .bannerStat2 {
   translate: clamp(-10rem, -0.5vw, 5rem);
@@ -125,5 +125,5 @@
   translate: clamp(-10rem, -0.1vw, 5rem);
 }
 .bannerStat4 {
-  translate: clamp(3.1rem, 5vw, 10rem);
+  translate: clamp(3.1rem, 4vw, 6rem);
 }

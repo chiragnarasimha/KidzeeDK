@@ -28,20 +28,24 @@ const NavItem = ({ page, icon }: GroupItemProps) => {
         type="radio"
         id={id}
         className={cn("absolute top-0 left-0 h-full w-full opacity-0", {
-          [styles["anchorName"]]: defaultChecked,
+          [styles.anchorName]: defaultChecked,
         })}
         name="nav-button"
         onClick={handleClick}
       />
 
-      <div className="flex h-14 flex-col items-center justify-center px-3 md:h-10 md:flex-row md:gap-1 md:px-2 lg:h-12 lg:w-24 xl:h-12 xl:w-30">
+      <div className="flex h-14 flex-col items-center justify-center px-3 md:h-10 md:flex-row md:gap-1 md:px-2 lg:h-12 lg:w-24 xl:h-12 xl:w-30 2xl:h-14 2xl:w-32">
         <HugeiconsIcon
           icon={icon}
-          className={"[&svg]:w-5 md:[&svg]:w-4 lg:[&svg]:w-5"}
+          className={
+            "[&svg]:w-5 md:[&svg]:w-4 lg:[&svg]:w-5 2xl:[&svg]:h-7 2xl:[&svg]:w-7"
+          }
           color={defaultChecked ? "#612595" : ""}
         />
         <span
-          className={cn("text-xs", { [styles["activeText"]]: defaultChecked })}
+          className={cn("text-xs 2xl:text-lg", {
+            [styles.activeText]: defaultChecked,
+          })}
         >
           {page}
         </span>
